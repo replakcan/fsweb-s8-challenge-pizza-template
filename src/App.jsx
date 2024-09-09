@@ -7,7 +7,6 @@ import Sonuc from "./pages/Sonuc";
 function App() {
   return (
     <>
-      <p>Hello World</p>
       <Switch>
         <Route exact path="/">
           <Giris />
