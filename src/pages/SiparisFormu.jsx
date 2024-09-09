@@ -8,7 +8,6 @@ import SiparisNotu from "../components/SiparisFormu_siparisNotu";
 import UcretHesap from "../components/SiparisFormu_ucretHesap";
 import IsimAlani from "../components/SiparisFormu_isimAlani";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card } from "reactstrap";
 
 const initialSiparis = {
   isim: "",

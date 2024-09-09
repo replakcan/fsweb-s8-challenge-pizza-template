@@ -5,6 +5,7 @@ export default function UcretHesap({
   adet,
   ekMalzemeHesabi,
   toplamHesap,
+  disabled
 }) {
   return (
     <div className="hesap-butonlari">
@@ -28,7 +29,7 @@ export default function UcretHesap({
         </div>
         <div className="submit-btn">
         <NavLink to="/siparis-ozeti">
-        <button type="submit">SİPARİŞ VER</button>
+        <button disabled={disabled} type="submit">SİPARİŞ VER</button>
         </NavLink>
         </div>
       </div>
