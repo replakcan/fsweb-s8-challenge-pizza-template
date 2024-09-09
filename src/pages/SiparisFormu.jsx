@@ -15,20 +15,17 @@ const initialSiparis = {
   hamur: "",
   "ek-malzeme": "",
   "siparis-notu": "",
-  adet: "1",
 };
 
 const initialErrors = {
   isim: "",
-  boyut: "",
-  hamur: "",
+  boyut: "zorunlu alan*",
+  hamur: "zorunlu alan*",
   "ek-malzeme": "",
 };
 
 const errorMessages = {
   isim: "İsim en az 3 karakter içermelidir.",
-  boyut: "*",
-  hamur: "*",
   "ek-malzeme": "En az 4 seçim yapmalısınız.",
 };
 
@@ -83,6 +80,14 @@ function SiparisFormu() {
       }
     }
 
+    if (name === "boyut" || name === "hamur") {
+      if (siparis.boyut !== "") {
+        setErrors({ ...errors, [name]: "" });
+      } else {
+        setErrors({ ...errors, [name]: errorMessages.boyut });
+      }
+    }
+
     //state'i günceller
     if (id === "cikar") {
       setAdet((adet) => adet - 1);
@@ -114,7 +119,8 @@ function SiparisFormu() {
         <SiparisFormuInfo />
         <div className="pizza-boyutlari">
           <div className="boyut-sec">
-            <h3>Boyut Seç</h3>
+            <h3>Boyut Seç </h3>
+            {errors.boyut && <p className="error-message">{errors.boyut}</p>}
             {boyutlar.map((boyut, index) => {
               return (
                 <PizzaBoyut
@@ -128,6 +134,7 @@ function SiparisFormu() {
           </div>
           <div className="hamur-sec">
             <h3>Hamur Seç</h3>
+            {errors.hamur && <p className="error-message">{errors.hamur}</p>}
             <PizzaHamur
               handleInputChange={handleInputChange}
               hamur={siparis.hamur}
