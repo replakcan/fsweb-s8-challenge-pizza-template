@@ -73,6 +73,17 @@ function SiparisFormu() {
   function handleInputChange(event) {
     let { id, name, value } = event.target;
 
+
+    //validation kontrolü
+    if (name === "isim") {
+      if (value.length >= 3) {
+        setErrors({...errors, [name]: ""});
+      } else {
+        setErrors({...errors, [name]: errorMessages.isim});
+      }
+    }
+
+    //state'i günceller
     if (id === "cikar") {
       setAdet((adet) => adet - 1);
     } else if (id === "ekle") {
@@ -141,6 +152,7 @@ function SiparisFormu() {
         </div>
         <div className="isim-alani">
           <IsimAlani isim={siparis.isim} onChange={handleInputChange} />
+          {errors.isim && <p className="error-message">{errors.isim}</p>}
         </div>
         <div className="siparis-notu">
           <SiparisNotu
