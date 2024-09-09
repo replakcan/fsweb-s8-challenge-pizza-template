@@ -30,7 +30,7 @@ const errorMessages = {
   boyut: "*",
   hamur: "*",
   "ek-malzeme": "En az 4 seçim yapmalısınız.",
-}
+};
 
 const pizza_ucreti = 85.5;
 
@@ -62,7 +62,8 @@ function SiparisFormu() {
     if (
       siparis.boyut !== "" &&
       siparis.hamur !== "" &&
-      siparis.isim.length >= 3 && siparis["ek-malzeme"].length >= 4
+      siparis.isim.length >= 3 &&
+      siparis["ek-malzeme"].length >= 4
     ) {
       setIsValid(true);
     } else {
@@ -73,13 +74,12 @@ function SiparisFormu() {
   function handleInputChange(event) {
     let { id, name, value } = event.target;
 
-
     //validation kontrolü
     if (name === "isim") {
       if (value.length >= 3) {
-        setErrors({...errors, [name]: ""});
+        setErrors({ ...errors, [name]: "" });
       } else {
-        setErrors({...errors, [name]: errorMessages.isim});
+        setErrors({ ...errors, [name]: errorMessages.isim });
       }
     }
 
@@ -142,6 +142,7 @@ function SiparisFormu() {
               return (
                 <EkMalzemeler
                   key={index}
+                  disabled={siparis["ek-malzeme"].length >= 10 && !siparis["ek-malzeme"].includes(malzeme)}
                   handleInputChange={handleInputChange}
                   malzeme={malzeme}
                   checked={siparis["ek-malzeme"].includes(malzeme)}
