@@ -12,10 +12,7 @@ function SiparisFormuInfo() {
           </div>
           <div>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias
-              facilis repudiandae nulla consequatur unde deleniti in, eius ut
-              distinctio, assumenda totam minus! Maxime id magni quod, commodi
-              libero unde perspiciatis!
+              Frontent Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tan saba göre. Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış, daha sonra geleneksel olarak odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle yuvarlak, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan Türk kökenli lezzetli bir yemektir -yersen-... Küçük bir pizzaya bazen pizzetta denir.
             </p>
           </div>
         </div>

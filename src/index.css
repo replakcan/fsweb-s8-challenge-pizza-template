@@ -53,13 +53,13 @@ h3 {
 }
 
 .siparis-formu-header {
-  background: #CE2829;
+  background: #ce2829;
   text-align: center;
   padding-top: 2.5rem;
   color: white;
 }
 .siparis-formu-header img {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .form {
@@ -69,9 +69,11 @@ h3 {
   max-width: 600px;
   margin: 0 auto;
   padding: 1rem;
+  font-family: "Barlow";
 }
 
 .content-div {
+  color: #5f5f5f;
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
@@ -128,11 +130,18 @@ h3 {
 .ek-malzemeler {
   display: flex;
   flex-direction: column;
-
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
+.ek-malzemeler p {
+  color: #5f5f5f;
+}
+
+.ek-malzemeler h3 {
+    margin-bottom: .5rem;
+  }
 
 .malzeme {
   min-width: 150px;
@@ -158,6 +167,7 @@ h3 {
 #siparis-notu {
   width: 100%;
   margin-bottom: 2rem;
+  padding: .5rem;
 }
 
 .hesap-butonlari {
@@ -226,13 +236,13 @@ button {
 }
 
 .submit-btn {
-    margin: 0;
+  margin: 0;
 }
 
 .siparis-toplami-info {
-    display: flex;
-    flex-direction: column;
-    padding-left: 3rem;
-    gap:1rem;
-    padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+  gap: 1rem;
+  padding-top: 2.5rem;
 }
