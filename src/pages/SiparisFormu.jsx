@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import SiparisFormuHeader from "../components/SiparisFormu_header";
 import SiparisFormuInfo from "../components/SiparisFormu_info";
 import PizzaBoyut from "../components/SiparisFormu_pizzaBoyut";
+import PizzaHamur from "../components/SiparisFormu_pizzaHamur";
 
 const initialSiparis = {
   boyut: "",
@@ -40,17 +41,25 @@ function SiparisFormu() {
     <section className="siparis-formu">
       <SiparisFormuHeader />
       <SiparisFormuInfo />
-      <div className="boyut-sec"> 
-      {boyutlar.map((boyut, index) => {
-        return (
-          <PizzaBoyut
-            key={index}
-            boyut={boyut}
-            checked={siparis.boyut === boyut}
+      <div className="pizza-boyutlari">
+        <div className="boyut-sec">
+          {boyutlar.map((boyut, index) => {
+            return (
+              <PizzaBoyut
+                key={index}
+                boyut={boyut}
+                checked={siparis.boyut === boyut}
+                handleInputChange={handleInputChange}
+              />
+            );
+          })}
+        </div>
+        <div className="hamur-sec">
+          <PizzaHamur
             handleInputChange={handleInputChange}
+            hamur={siparis.hamur}
           />
-        );
-      })}
+        </div>
       </div>
     </section>
   );
