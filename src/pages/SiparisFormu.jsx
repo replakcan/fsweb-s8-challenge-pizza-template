@@ -18,6 +18,14 @@ const initialSiparis = {
   adet: "1",
 };
 
+const initialErrors = {
+  isim: "",
+  boyut: "",
+  hamur: "",
+  "ek-malzeme": "",
+  "siparis-notu": "",
+};
+
 const pizza_ucreti = 85.5;
 
 const boyutlar = ["Küçük", "Orta", "Büyük"];
@@ -40,11 +48,16 @@ const ekMalzemeler = [
 
 function SiparisFormu() {
   const [siparis, setSiparis] = useState(initialSiparis);
+  const [errors, setErrors] = useState(initialErrors);
   const [isValid, setIsValid] = useState(false);
   const [adet, setAdet] = useState(1);
 
   useEffect(() => {
-    if (siparis.boyut !== "" && siparis.hamur !== "") {
+    if (
+      siparis.boyut !== "" &&
+      siparis.hamur !== "" &&
+      siparis.isim.length >= 3 && siparis["ek-malzeme"].length >= 4
+    ) {
       setIsValid(true);
     } else {
       setIsValid(false);
@@ -59,7 +72,6 @@ function SiparisFormu() {
     } else if (id === "ekle") {
       setAdet((adet) => adet + 1);
     }
-    
 
     if (name === "ek-malzeme") {
       if (siparis["ek-malzeme"].includes(value)) {
@@ -106,29 +118,29 @@ function SiparisFormu() {
           </div>
         </div>
         <div className="ek-malzemeler">
-            <h3>Ek Malzemeler</h3>
-            <p>En az 4 adet ve en fazla 10 adet seçim yapabilirsiniz. 5₺</p>
+          <h3>Ek Malzemeler</h3>
+          <p>En az 4 adet ve en fazla 10 adet seçim yapabilirsiniz. 5₺</p>
           <div className="malzemos">
-          {ekMalzemeler.map((malzeme, index) => {
-            return (
-              <EkMalzemeler
-                key={index}
-                handleInputChange={handleInputChange}
-                malzeme={malzeme}
-                checked={siparis["ek-malzeme"].includes(malzeme)}
-              />
-            );
-          })}
+            {ekMalzemeler.map((malzeme, index) => {
+              return (
+                <EkMalzemeler
+                  key={index}
+                  handleInputChange={handleInputChange}
+                  malzeme={malzeme}
+                  checked={siparis["ek-malzeme"].includes(malzeme)}
+                />
+              );
+            })}
           </div>
         </div>
         <div className="isim-alani">
-          <IsimAlani isim={siparis.isim} onChange={handleInputChange}/>
+          <IsimAlani isim={siparis.isim} onChange={handleInputChange} />
         </div>
         <div className="siparis-notu">
-        <SiparisNotu
-          handleInputChange={handleInputChange}
-          siparisnotu={siparis["siparis-notu"]}
-        />
+          <SiparisNotu
+            handleInputChange={handleInputChange}
+            siparisnotu={siparis["siparis-notu"]}
+          />
         </div>
         <UcretHesap
           handleInputChange={handleInputChange}
