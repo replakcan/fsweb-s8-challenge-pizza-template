@@ -3,6 +3,7 @@ import SiparisFormuHeader from "../components/SiparisFormu_header";
 import SiparisFormuInfo from "../components/SiparisFormu_info";
 import PizzaBoyut from "../components/SiparisFormu_pizzaBoyut";
 import PizzaHamur from "../components/SiparisFormu_pizzaHamur";
+import EkMalzemeler from "../components/SiparisFormu_ekMalzemeler";
 
 const initialSiparis = {
   boyut: "",
@@ -14,6 +15,22 @@ const initialSiparis = {
 };
 
 const boyutlar = ["Küçük", "Orta", "Büyük"];
+
+const ekMalzemeler = [
+  "Pepperoni",
+  "Sosis",
+  "Kanada Jambonu",
+  "Tavuk Izgara",
+  "Soğan",
+  "Domates",
+  "Mısır",
+  "Sucuk",
+  "Jalepeno",
+  "Sarımsak",
+  "Biber",
+  "Ananas",
+  "Kabak",
+];
 
 function SiparisFormu() {
   const [siparis, setSiparis] = useState(initialSiparis);
@@ -60,6 +77,16 @@ function SiparisFormu() {
             hamur={siparis.hamur}
           />
         </div>
+      </div>
+      <div className="ek-malzemeler">
+        {ekMalzemeler.map((malzeme, index) => {
+          return <EkMalzemeler
+            key={index}
+            handleInputChange={handleInputChange}
+            malzeme={malzeme}
+            checked={siparis["ek-malzeme"].includes(malzeme)}
+          />;
+        })}
       </div>
     </section>
   );
