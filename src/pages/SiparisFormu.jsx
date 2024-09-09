@@ -17,7 +17,6 @@ const initialSiparis = {
   "ek-malzeme": "",
   "siparis-notu": "",
   adet: "1",
-  fiyat: "",
 };
 
 const pizza_ucreti = 85.5;
