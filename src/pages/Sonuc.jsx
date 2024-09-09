@@ -1,13 +1,9 @@
 function Sonuc() {
+  return (
+    <>
+      <p>Sonuc</p>
+    </>
+  );
+}
 
-    return (
-      <>
-        <p>Sonuc</p>
-  
-        
-      </>
-    )
-  }
-  
-  export default Sonuc
-  
+export default Sonuc;

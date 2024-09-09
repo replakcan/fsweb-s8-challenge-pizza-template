@@ -1,13 +1,9 @@
 function SiparisFormu() {
+  return (
+    <>
+      <p>SiparisFormu</p>
+    </>
+  );
+}
 
-    return (
-      <>
-        <p>SiparisFormu</p>
-  
-        
-      </>
-    )
-  }
-  
-  export default SiparisFormu
-  
+export default SiparisFormu;
