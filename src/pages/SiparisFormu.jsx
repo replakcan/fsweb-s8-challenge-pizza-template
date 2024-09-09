@@ -105,9 +105,8 @@ function SiparisFormu() {
           </div>
         </div>
         <div className="ek-malzemeler">
-          <div>
             <h3>Ek Malzemeler</h3>
-          </div>
+          <div>
           {ekMalzemeler.map((malzeme, index) => {
             return (
               <EkMalzemeler
@@ -118,6 +117,7 @@ function SiparisFormu() {
               />
             );
           })}
+          </div>
         </div>
         <SiparisNotu
           handleInputChange={handleInputChange}
