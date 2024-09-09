@@ -23,8 +23,14 @@ const initialErrors = {
   boyut: "",
   hamur: "",
   "ek-malzeme": "",
-  "siparis-notu": "",
 };
+
+const errorMessages = {
+  isim: "İsim en az 3 karakter içermelidir.",
+  boyut: "*",
+  hamur: "*",
+  "ek-malzeme": "En az 4 seçim yapmalısınız.",
+}
 
 const pizza_ucreti = 85.5;
 
