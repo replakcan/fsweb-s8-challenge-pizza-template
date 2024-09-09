@@ -1,9 +1,10 @@
-export default function ({ isim, onChange }) {
+export default function IsimAlani({ isim, onChange }) {
   return (
     <>
-      <label>
-        İsim:
+      <h3>İsim</h3>
+      <label className="isim-input">
         <input
+        placeholder="Lütfen isminizi giriniz."
           type="text"
           id="text"
           name="isim"
