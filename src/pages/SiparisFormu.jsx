@@ -11,6 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Card } from "reactstrap";
 
 const initialSiparis = {
+  isim: "",
   boyut: "",
   hamur: "",
   "ek-malzeme": "",
@@ -123,7 +124,7 @@ function SiparisFormu() {
           </div>
         </div>
         <div className="isim-alani">
-          <IsimAlani />
+          <IsimAlani isim={siparis.isim} onChange={handleInputChange}/>
         </div>
         <div className="siparis-notu">
         <SiparisNotu
