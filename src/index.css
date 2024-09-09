@@ -6,7 +6,7 @@
 * {
     padding: 0;
     margin: 0;
-    border: 1px solid black;
+    
 }
 
 .giris {
@@ -45,5 +45,24 @@
 }
 
 .siparis-formu {
-    margin: 0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.siparis-formu-header {
+    border: 1px solid purple;
+    background: rgb(253, 201, 19, 0.5);
+    text-align: center;
+}
+
+.form {
+    border: 1px solid purple;
+    background: rgba(19, 253, 124, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
