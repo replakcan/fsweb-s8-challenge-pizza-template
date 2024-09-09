@@ -1,15 +1,30 @@
-import { useState } from 'react'
-
-import './App.css'
+import "./App.css";
+import { Switch, Route } from "react-router-dom";
+import SiparisFormu from "./pages/SiparisFormu";
+import Giris from "./pages/Giris";
+import Sonuc from "./pages/Sonuc";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      
+      <p>Hello World</p>
+      <Switch>
+        <Route exact path="/">
+          <Giris />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path="/siparis-formu">
+          <SiparisFormu />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path="/siparis-ozeti">
+          <Sonuc />
+        </Route>
+      </Switch>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
