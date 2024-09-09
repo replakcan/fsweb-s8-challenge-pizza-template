@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export default function UcretHesap({
   handleInputChange,
   adet,
@@ -22,7 +24,9 @@ export default function UcretHesap({
           Toplam..........
           {toplamHesap}
         </p>
+        <NavLink to="/siparis-ozeti">
         <button type="submit">SİPARİŞ VER</button>
+        </NavLink>
       </div>
     </div>
   );
