@@ -107,7 +107,7 @@ function SiparisFormu() {
         </div>
         <div className="ek-malzemeler">
             <h3>Ek Malzemeler</h3>
-            <p>En fazla 10 malzeme seçebilirsiniz. 5₺</p>
+            <p>En az 4 adet ve en fazla 10 adet seçim yapabilirsiniz. 5₺</p>
           <div className="malzemos">
           {ekMalzemeler.map((malzeme, index) => {
             return (
