@@ -4,6 +4,8 @@ import SiparisFormuInfo from "../components/SiparisFormu_info";
 import PizzaBoyut from "../components/SiparisFormu_pizzaBoyut";
 import PizzaHamur from "../components/SiparisFormu_pizzaHamur";
 import EkMalzemeler from "../components/SiparisFormu_ekMalzemeler";
+import SiparisNotu from "../components/SiparisFormu_siparisNotu";
+import UcretHesap from "../components/SiparisFormu_ucretHesap";
 
 const initialSiparis = {
   boyut: "",
@@ -13,6 +15,8 @@ const initialSiparis = {
   adet: "1",
   fiyat: "",
 };
+
+const pizza_ucreti = 85.5;
 
 const boyutlar = ["Küçük", "Orta", "Büyük"];
 
@@ -34,9 +38,26 @@ const ekMalzemeler = [
 
 function SiparisFormu() {
   const [siparis, setSiparis] = useState(initialSiparis);
+  const [isValid, setIsValid] = useState(false);
+  const [adet, setAdet] = useState(1);
+
+  useEffect(() => {
+    if (siparis.boyut !== "" && siparis.hamur !== "") {
+      setIsValid(true);
+    } else {
+      setIsValid(false);
+    }
+  }, [siparis]);
 
   function handleInputChange(event) {
     let { id, name, value } = event.target;
+
+    if (id === "cikar") {
+      setAdet((adet) => adet - 1);
+    } else if (id === "ekle") {
+      setAdet((adet) => adet + 1);
+    }
+
     if (name === "ek-malzeme") {
       if (siparis["ek-malzeme"].includes(value)) {
         setSiparis({
@@ -60,6 +81,7 @@ function SiparisFormu() {
       <SiparisFormuInfo />
       <div className="pizza-boyutlari">
         <div className="boyut-sec">
+          <h3>Boyut Seç</h3>
           {boyutlar.map((boyut, index) => {
             return (
               <PizzaBoyut
@@ -72,6 +94,7 @@ function SiparisFormu() {
           })}
         </div>
         <div className="hamur-sec">
+          <h3>Hamur Seç</h3>
           <PizzaHamur
             handleInputChange={handleInputChange}
             hamur={siparis.hamur}
@@ -79,15 +102,29 @@ function SiparisFormu() {
         </div>
       </div>
       <div className="ek-malzemeler">
+        <h3>Ek Malzemeler</h3>
         {ekMalzemeler.map((malzeme, index) => {
-          return <EkMalzemeler
-            key={index}
-            handleInputChange={handleInputChange}
-            malzeme={malzeme}
-            checked={siparis["ek-malzeme"].includes(malzeme)}
-          />;
+          return (
+            <EkMalzemeler
+              key={index}
+              handleInputChange={handleInputChange}
+              malzeme={malzeme}
+              checked={siparis["ek-malzeme"].includes(malzeme)}
+            />
+          );
         })}
       </div>
+      <SiparisNotu
+        handleInputChange={handleInputChange}
+        siparisnotu={siparis["siparis-notu"]}
+      />
+      <UcretHesap
+        handleInputChange={handleInputChange}
+        adet={adet}
+        ekMalzemeHesabi={siparis["ek-malzeme"].length * 5}
+        toplamHesap={(pizza_ucreti + siparis["ek-malzeme"].length * 5) * adet}
+        disabled={!isValid}
+      />
     </section>
   );
 }
