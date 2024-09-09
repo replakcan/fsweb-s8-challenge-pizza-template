@@ -6,6 +6,7 @@ import PizzaHamur from "../components/SiparisFormu_pizzaHamur";
 import EkMalzemeler from "../components/SiparisFormu_ekMalzemeler";
 import SiparisNotu from "../components/SiparisFormu_siparisNotu";
 import UcretHesap from "../components/SiparisFormu_ucretHesap";
+import IsimAlani from "../components/SiparisFormu_isimAlani";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card } from "reactstrap";
 
@@ -59,6 +60,7 @@ function SiparisFormu() {
     } else if (id === "ekle") {
       setAdet((adet) => adet + 1);
     }
+    
 
     if (name === "ek-malzeme") {
       if (siparis["ek-malzeme"].includes(value)) {
@@ -119,6 +121,9 @@ function SiparisFormu() {
             );
           })}
           </div>
+        </div>
+        <div className="isim-alani">
+          <IsimAlani />
         </div>
         <div className="siparis-notu">
         <SiparisNotu
