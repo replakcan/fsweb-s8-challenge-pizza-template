@@ -53,13 +53,13 @@ h3 {
 }
 
 .siparis-formu-header {
-  border: 1px solid purple;
+  
   background: rgb(253, 201, 19, 0.5);
   text-align: center;
 }
 
 .form {
-  border: 1px solid purple;
+  
 
   display: flex;
   flex-direction: column;
@@ -85,20 +85,20 @@ h3 {
 }
 
 .content-info {
-  border: 1px solid purple;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .content-points {
-  border: 1px solid purple;
+  
   display: flex;
   gap: 5rem;
 }
 
 .pizza-boyutlari {
-  border: 1px solid black;
+  
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -127,7 +127,7 @@ h3 {
 .ek-malzemeler {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -155,70 +155,73 @@ h3 {
 }
 
 #siparis-notu {
-    width: 100%;
-    margin-bottom: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .hesap-butonlari {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    margin-top:1rem;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.adet-butonlari {
+  display: flex;
+  width: 50px;
+  align-items: center;
   
-  .adet-butonlari {
-    display: flex;
-    width: 50px;
-    align-items: center;
-  }
+}
+
+#ekle {
+  padding: 30% 50%;
+  border-right: 1px solid gray;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+
+#cikar {
+  padding: 30% 50%;
+  border-right: 1px solid gray;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+
+#adettendir {
+  padding: 30% 50%;
+  border: 1px solid gray;
+  margin-bottom: 0;
+  text-decoration: none;
   
-  #ekle {
-    padding: 30% 50%;
-    border-right: 1px solid gray;
-    border-top-right-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem;
-  }
+}
+
+.siparis-toplami {
   
-  #cikar {
-    padding: 30% 50%;
-    border-right: 1px solid gray;
-    border-top-left-radius: 0.3rem;
-    border-bottom-left-radius: 0.3rem;
-  }
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  flex: 0.5;
+  gap: 1rem;
+  padding: 5% 10%;
+  padding-bottom: 0;
+  margin-bottom: 30%;
+}
+
+.siparis-toplami button {
+  padding: 5%;
+  width: 100%;
+  margin-top: 2rem;
+  display: block;
   
-  #adettendir {
-    padding: 30% 50%;
-    border: 1px solid gray;
-    margin-bottom: 0;
-  }
-  
-  .siparis-toplami {
-    border: 1px solid gray;
-    border-radius: 0.3rem;
-    display: flex;
-    flex-direction: column;
-    flex: 0.5;
-    gap: 1rem;
-    padding: 5% 10%;
-    padding-bottom: 0;
-    margin-bottom: 30%;
-  }
-  
-  .siparis-toplami button {
-    padding: 5%;
-    width: 100%;
-    margin-top: 2rem;
-    display: block;
-    border: 1px solid gray;
-    border-radius: 0.3rem;
-  }
-  
-  button {
-    background: #fdc913;
-  }
-  
-  #kirmizi {
-    color: #ce2829;
-    font-weight: bold;
-  }
+  border-radius: 0.3rem;
+}
+
+button {
+  background: #fdc913;
+}
+
+#kirmizi {
+  color: #ce2829;
+  font-weight: bold;
+}
