@@ -6,6 +6,8 @@ import PizzaHamur from "../components/SiparisFormu_pizzaHamur";
 import EkMalzemeler from "../components/SiparisFormu_ekMalzemeler";
 import SiparisNotu from "../components/SiparisFormu_siparisNotu";
 import UcretHesap from "../components/SiparisFormu_ucretHesap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Card } from "reactstrap";
 
 const initialSiparis = {
   boyut: "",
@@ -78,53 +80,57 @@ function SiparisFormu() {
   return (
     <section className="siparis-formu">
       <SiparisFormuHeader />
-      <SiparisFormuInfo />
-      <div className="pizza-boyutlari">
-        <div className="boyut-sec">
-          <h3>Boyut Seç</h3>
-          {boyutlar.map((boyut, index) => {
+      <div className="form">
+        <SiparisFormuInfo />
+        <div className="pizza-boyutlari">
+          <div className="boyut-sec">
+            <h3>Boyut Seç</h3>
+            {boyutlar.map((boyut, index) => {
+              return (
+                <PizzaBoyut
+                  key={index}
+                  boyut={boyut}
+                  checked={siparis.boyut === boyut}
+                  handleInputChange={handleInputChange}
+                />
+              );
+            })}
+          </div>
+          <div className="hamur-sec">
+            <h3>Hamur Seç</h3>
+            <PizzaHamur
+              handleInputChange={handleInputChange}
+              hamur={siparis.hamur}
+            />
+          </div>
+        </div>
+        <div className="ek-malzemeler">
+          <div>
+            <h3>Ek Malzemeler</h3>
+          </div>
+          {ekMalzemeler.map((malzeme, index) => {
             return (
-              <PizzaBoyut
+              <EkMalzemeler
                 key={index}
-                boyut={boyut}
-                checked={siparis.boyut === boyut}
                 handleInputChange={handleInputChange}
+                malzeme={malzeme}
+                checked={siparis["ek-malzeme"].includes(malzeme)}
               />
             );
           })}
         </div>
-        <div className="hamur-sec">
-          <h3>Hamur Seç</h3>
-          <PizzaHamur
-            handleInputChange={handleInputChange}
-            hamur={siparis.hamur}
-          />
-        </div>
+        <SiparisNotu
+          handleInputChange={handleInputChange}
+          siparisnotu={siparis["siparis-notu"]}
+        />
+        <UcretHesap
+          handleInputChange={handleInputChange}
+          adet={adet}
+          ekMalzemeHesabi={siparis["ek-malzeme"].length * 5}
+          toplamHesap={(pizza_ucreti + siparis["ek-malzeme"].length * 5) * adet}
+          disabled={!isValid}
+        />
       </div>
-      <div className="ek-malzemeler">
-        <h3>Ek Malzemeler</h3>
-        {ekMalzemeler.map((malzeme, index) => {
-          return (
-            <EkMalzemeler
-              key={index}
-              handleInputChange={handleInputChange}
-              malzeme={malzeme}
-              checked={siparis["ek-malzeme"].includes(malzeme)}
-            />
-          );
-        })}
-      </div>
-      <SiparisNotu
-        handleInputChange={handleInputChange}
-        siparisnotu={siparis["siparis-notu"]}
-      />
-      <UcretHesap
-        handleInputChange={handleInputChange}
-        adet={adet}
-        ekMalzemeHesabi={siparis["ek-malzeme"].length * 5}
-        toplamHesap={(pizza_ucreti + siparis["ek-malzeme"].length * 5) * adet}
-        disabled={!isValid}
-      />
     </section>
   );
 }
