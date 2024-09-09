@@ -142,7 +142,10 @@ function SiparisFormu() {
               return (
                 <EkMalzemeler
                   key={index}
-                  disabled={siparis["ek-malzeme"].length >= 10 && !siparis["ek-malzeme"].includes(malzeme)}
+                  disabled={
+                    siparis["ek-malzeme"].length >= 10 &&
+                    !siparis["ek-malzeme"].includes(malzeme)
+                  }
                   handleInputChange={handleInputChange}
                   malzeme={malzeme}
                   checked={siparis["ek-malzeme"].includes(malzeme)}
