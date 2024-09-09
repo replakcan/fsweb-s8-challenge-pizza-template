@@ -106,7 +106,8 @@ function SiparisFormu() {
         </div>
         <div className="ek-malzemeler">
             <h3>Ek Malzemeler</h3>
-          <div>
+            <p>En fazla 10 malzeme seçebilirsiniz. 5₺</p>
+          <div className="malzemos">
           {ekMalzemeler.map((malzeme, index) => {
             return (
               <EkMalzemeler
@@ -119,10 +120,12 @@ function SiparisFormu() {
           })}
           </div>
         </div>
+        <div className="siparis-notu">
         <SiparisNotu
           handleInputChange={handleInputChange}
           siparisnotu={siparis["siparis-notu"]}
         />
+        </div>
         <UcretHesap
           handleInputChange={handleInputChange}
           adet={adet}

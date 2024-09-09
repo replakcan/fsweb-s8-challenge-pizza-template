@@ -18,15 +18,19 @@ export default function UcretHesap({
         </button>
       </div>
       <div className="siparis-toplami">
+        <div className="siparis-toplami-info">
         <h3>Sipariş Toplamı</h3>
-        <p>Seçimler..........{ekMalzemeHesabi}</p>
+        <p>Seçimler____________________{ekMalzemeHesabi}₺</p>
         <p id="kirmizi">
-          Toplam..........
-          {toplamHesap}
+          Toplam____________________
+          {toplamHesap}₺
         </p>
+        </div>
+        <div className="submit-btn">
         <NavLink to="/siparis-ozeti">
         <button type="submit">SİPARİŞ VER</button>
         </NavLink>
+        </div>
       </div>
     </div>
   );

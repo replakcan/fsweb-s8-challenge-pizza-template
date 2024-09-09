@@ -53,19 +53,22 @@ h3 {
 }
 
 .siparis-formu-header {
-  
-  background: rgb(253, 201, 19, 0.5);
+  background: #CE2829;
   text-align: center;
+  padding-top: 2.5rem;
+  color: white;
+}
+.siparis-formu-header img {
+    margin-bottom: 2rem;
 }
 
 .form {
-  
-
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 600px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 .content-div {
@@ -77,6 +80,7 @@ h3 {
 .content-div h3 {
   font-weight: bold;
   margin: 0;
+  margin-bottom: 1rem;
 }
 
 .content-ucret {
@@ -85,20 +89,17 @@ h3 {
 }
 
 .content-info {
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .content-points {
-  
   display: flex;
   gap: 5rem;
 }
 
 .pizza-boyutlari {
-  
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -127,7 +128,7 @@ h3 {
 .ek-malzemeler {
   display: flex;
   flex-direction: column;
-  
+
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -151,12 +152,12 @@ h3 {
   gap: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid lightgray;
 }
 
 #siparis-notu {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .hesap-butonlari {
@@ -171,49 +172,47 @@ h3 {
   display: flex;
   width: 50px;
   align-items: center;
-  
 }
 
 #ekle {
   padding: 30% 50%;
-  border-right: 1px solid gray;
+  border-right: 1px solid lightgray;
   border-top-right-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
 }
 
 #cikar {
   padding: 30% 50%;
-  border-right: 1px solid gray;
+  border-right: 1px solid lightgray;
   border-top-left-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem;
 }
 
 #adettendir {
   padding: 30% 50%;
-  border: 1px solid gray;
+  border: 1px solid lightgray;
   margin-bottom: 0;
   text-decoration: none;
-  
 }
 
 .siparis-toplami {
-  
   border-radius: 0.3rem;
   display: flex;
   flex-direction: column;
   flex: 0.5;
   gap: 1rem;
-  padding: 5% 10%;
   padding-bottom: 0;
   margin-bottom: 30%;
+  border: 1px solid lightgray;
+  flex: 0.68;
 }
 
 .siparis-toplami button {
   padding: 5%;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: block;
-  
+
   border-radius: 0.3rem;
 }
 
@@ -224,4 +223,16 @@ button {
 #kirmizi {
   color: #ce2829;
   font-weight: bold;
+}
+
+.submit-btn {
+    margin: 0;
+}
+
+.siparis-toplami-info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+    gap:1rem;
+    padding-top: 2.5rem;
 }
