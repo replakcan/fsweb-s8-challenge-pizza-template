@@ -174,11 +174,14 @@ h3 {
 }
 
 .hesap-butonlari {
+  border: 1px solid purple;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
   margin-top: 1rem;
+  flex-wrap: wrap;
+  flex: 1;
 }
 
 .adet-butonlari {
@@ -225,7 +228,6 @@ h3 {
   width: 100%;
   margin-top: 1rem;
   display: block;
-
   border-radius: 0.3rem;
 }
 
