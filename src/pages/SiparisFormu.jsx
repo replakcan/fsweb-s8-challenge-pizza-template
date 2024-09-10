@@ -72,7 +72,6 @@ function SiparisFormu() {
   function handleInputChange(event) {
     let { id, name, value } = event.target;
 
-    //validation kontrolü
     if (name === "isim") {
       if (value.length >= 3) {
         setErrors({ ...errors, [name]: "" });
@@ -89,7 +88,6 @@ function SiparisFormu() {
       }
     }
 
-    //state'i günceller
     if (id === "cikar") {
       setAdet((adet) => adet - 1);
     } else if (id === "ekle") {
@@ -113,7 +111,7 @@ function SiparisFormu() {
     }
   }
 
-  const handleSubmit= (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     axios
       .post("https://reqres.in/api/pizza", siparis)
@@ -126,76 +124,74 @@ function SiparisFormu() {
   };
   console.log(siparis);
   return (
-      <section className="siparis-formu">
-        <SiparisFormuHeader />
-        <div className="form">
-          <SiparisFormuInfo />
-          <div className="pizza-boyutlari">
-            <div className="boyut-sec">
-              <h3>Boyut Seç </h3>
-              {errors.boyut && <p className="error-message">{errors.boyut}</p>}
-              {boyutlar.map((boyut, index) => {
-                return (
-                  <PizzaBoyut
-                    key={index}
-                    boyut={boyut}
-                    checked={siparis.boyut === boyut}
-                    handleInputChange={handleInputChange}
-                  />
-                );
-              })}
-            </div>
-            <div className="hamur-sec">
-              <h3>Hamur Seç</h3>
-              {errors.hamur && <p className="error-message">{errors.hamur}</p>}
-              <PizzaHamur
-                handleInputChange={handleInputChange}
-                hamur={siparis.hamur}
-              />
-            </div>
+    <section className="siparis-formu">
+      <SiparisFormuHeader />
+      <div className="form">
+        <SiparisFormuInfo />
+        <div className="pizza-boyutlari">
+          <div className="boyut-sec">
+            <h3>Boyut Seç </h3>
+            {errors.boyut && <p className="error-message">{errors.boyut}</p>}
+            {boyutlar.map((boyut, index) => {
+              return (
+                <PizzaBoyut
+                  key={index}
+                  boyut={boyut}
+                  checked={siparis.boyut === boyut}
+                  handleInputChange={handleInputChange}
+                />
+              );
+            })}
           </div>
-          <div className="ek-malzemeler">
-            <h3>Ek Malzemeler</h3>
-            <p>En az 4 adet ve en fazla 10 adet seçim yapabilirsiniz. 5₺</p>
-            <div className="malzemos">
-              {ekMalzemeler.map((malzeme, index) => {
-                return (
-                  <EkMalzemeler
-                    key={index}
-                    disabled={
-                      siparis["ek-malzeme"].length >= 10 &&
-                      !siparis["ek-malzeme"].includes(malzeme)
-                    }
-                    handleInputChange={handleInputChange}
-                    malzeme={malzeme}
-                    checked={siparis["ek-malzeme"].includes(malzeme)}
-                  />
-                );
-              })}
-            </div>
-          </div>
-          <div className="isim-alani">
-            <IsimAlani isim={siparis.isim} onChange={handleInputChange} />
-            {errors.isim && <p className="error-message">{errors.isim}</p>}
-          </div>
-          <div className="siparis-notu">
-            <SiparisNotu
+          <div className="hamur-sec">
+            <h3>Hamur Seç</h3>
+            {errors.hamur && <p className="error-message">{errors.hamur}</p>}
+            <PizzaHamur
               handleInputChange={handleInputChange}
-              siparisnotu={siparis["siparis-notu"]}
+              hamur={siparis.hamur}
             />
           </div>
-          <UcretHesap
+        </div>
+        <div className="ek-malzemeler">
+          <h3>Ek Malzemeler</h3>
+          <p>En az 4 adet ve en fazla 10 adet seçim yapabilirsiniz. 5₺</p>
+          <div className="malzemos">
+            {ekMalzemeler.map((malzeme, index) => {
+              return (
+                <EkMalzemeler
+                  key={index}
+                  disabled={
+                    siparis["ek-malzeme"].length >= 10 &&
+                    !siparis["ek-malzeme"].includes(malzeme)
+                  }
+                  handleInputChange={handleInputChange}
+                  malzeme={malzeme}
+                  checked={siparis["ek-malzeme"].includes(malzeme)}
+                />
+              );
+            })}
+          </div>
+        </div>
+        <div className="isim-alani">
+          <IsimAlani isim={siparis.isim} onChange={handleInputChange} />
+          {errors.isim && <p className="error-message">{errors.isim}</p>}
+        </div>
+        <div className="siparis-notu">
+          <SiparisNotu
             handleInputChange={handleInputChange}
-            adet={adet}
-            ekMalzemeHesabi={siparis["ek-malzeme"].length * 5}
-            toplamHesap={
-              (pizza_ucreti + siparis["ek-malzeme"].length * 5) * adet
-            }
-            disabled={!isValid}
-            onClick={handleSubmit}
+            siparisnotu={siparis["siparis-notu"]}
           />
         </div>
-      </section>
+        <UcretHesap
+          handleInputChange={handleInputChange}
+          adet={adet}
+          ekMalzemeHesabi={siparis["ek-malzeme"].length * 5}
+          toplamHesap={(pizza_ucreti + siparis["ek-malzeme"].length * 5) * adet}
+          disabled={!isValid}
+          onClick={handleSubmit}
+        />
+      </div>
+    </section>
   );
 }
 
