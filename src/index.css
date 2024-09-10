@@ -174,7 +174,6 @@ h3 {
 }
 
 .hesap-butonlari {
-  border: 1px solid purple;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
