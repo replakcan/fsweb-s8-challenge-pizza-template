@@ -1,8 +1,9 @@
-export default function PizzaBoyut({handleInputChange, boyut, checked}) {
+export default function PizzaBoyut({handleInputChange, boyut, checked, className}) {
   return (
     <>
       <label>
         <input
+          className={className}
           type="radio"
           name="boyut"
           value={boyut}

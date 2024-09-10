@@ -89,7 +89,7 @@ function SiparisFormu() {
     }
 
     if (id === "cikar") {
-      if (adet == 1){
+      if (adet == 1) {
         setAdet(1);
       } else {
         setAdet((adet) => adet - 1);
@@ -139,6 +139,9 @@ function SiparisFormu() {
             {boyutlar.map((boyut, index) => {
               return (
                 <PizzaBoyut
+                  className={
+                    index == 1 ? "data-cy" : ""
+                  }
                   key={index}
                   boyut={boyut}
                   checked={siparis.boyut === boyut}
