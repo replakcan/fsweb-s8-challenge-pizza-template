@@ -73,7 +73,7 @@ function SiparisFormu() {
   }, [siparis]);
 
   const countHandler = (event) => {
-    const { id, value } = event.target;
+    const { id } = event.target;
     if (id === "cikar") {
       if (adet == 1) {
         setAdet(1);
@@ -86,7 +86,7 @@ function SiparisFormu() {
   };
 
   function handleInputChange(event) {
-    let { id, name, value } = event.target;
+    let { name, value } = event.target;
 
     if (name === "isim") {
       if (value.length >= 3) {

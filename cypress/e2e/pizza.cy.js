@@ -28,8 +28,6 @@ describe("siparis-formu", () => {
     cy.get("#text").type("Alper Mutlu AKCAN");
     cy.get("#text").should("have.value", "Alper Mutlu AKCAN");
 
-    cy.get('.submit-btn').click()
-    cy.focused().click()
     cy.contains('SİPARİŞ VER').click()
   })
 
