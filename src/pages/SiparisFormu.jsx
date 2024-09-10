@@ -9,7 +9,6 @@ import UcretHesap from "../components/SiparisFormu_ucretHesap";
 import IsimAlani from "../components/SiparisFormu_isimAlani";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
 
 const initialSiparis = {
   isim: "",
