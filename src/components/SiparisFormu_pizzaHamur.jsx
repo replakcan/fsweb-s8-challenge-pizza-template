@@ -7,7 +7,7 @@ export default function PizzaHamur({handleInputChange, hamur}) {
               name="hamur"
               onChange={handleInputChange}
             >
-              <option value="İnce">İnce Hamur</option>
+              <option className="data-cy-hamur" value="İnce">İnce Hamur</option>
               <option value="Orta">Orta Hamur</option>
               <option value="Kalın">Kalın Hamur</option>
             </select>
