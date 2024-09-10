@@ -8,12 +8,8 @@ describe("siparis-formu", () => {
     cy.get("#text").should("have.value", "Alper Mutlu AKCAN");
   });
   it(".check() - check a checkbox", () => {
-    cy.get('.data-cy-not-disabled').not("[disabled]").check();
-
-    cy.get('.data-cy-not-disabled').not("[disabled]").should("be.checked");
-
-    cy.get('.data-cy-disabled').not("[disabled]").check();
-
-    cy.get('.data-cy-disabled').not("[disabled]").should("be.disabled");
+    cy.get(".data-cy-not-disabled").not("[disabled]").check();
+    cy.get(".data-cy-not-disabled").not("[disabled]").should("be.checked");
+    cy.get(".data-cy-disabled").should("be.disabled");
   });
 });
