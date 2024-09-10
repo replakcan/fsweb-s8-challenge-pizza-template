@@ -89,7 +89,11 @@ function SiparisFormu() {
     }
 
     if (id === "cikar") {
-      setAdet((adet) => adet - 1);
+      if (adet == 1){
+        setAdet(1);
+      } else {
+        setAdet((adet) => adet - 1);
+      }
     } else if (id === "ekle") {
       setAdet((adet) => adet + 1);
     }
@@ -159,7 +163,9 @@ function SiparisFormu() {
             {ekMalzemeler.map((malzeme, index) => {
               return (
                 <EkMalzemeler
-                  className={index >= 10 ? "data-cy-disabled" : "data-cy-not-disabled" }
+                  className={
+                    index >= 10 ? "data-cy-disabled" : "data-cy-not-disabled"
+                  }
                   key={index}
                   disabled={
                     siparis["ek-malzeme"].length >= 10 &&
