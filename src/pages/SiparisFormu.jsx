@@ -140,7 +140,7 @@ function SiparisFormu() {
               return (
                 <PizzaBoyut
                   className={
-                    index == 1 ? "data-cy" : ""
+                    index == 1 ? "data-cy-boyut" : ""
                   }
                   key={index}
                   boyut={boyut}
