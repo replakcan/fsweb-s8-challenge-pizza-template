@@ -11,11 +11,11 @@ export default function UcretHesap({
   return (
     <div className="hesap-butonlari">
       <div className="adet-butonlari">
-        <button id="cikar" name="adet" value={adet} onClick={handleInputChange}>
+        <button type="button" id="cikar" name="adet" value={adet} onClick={handleInputChange}>
           -
         </button>
         <p id="adettendir">{adet}</p>
-        <button id="ekle" name="adet" value={adet} onClick={handleInputChange}>
+        <button type="button" id="ekle" name="adet" value={adet} onClick={handleInputChange}>
           +
         </button>
       </div>
@@ -29,11 +29,10 @@ export default function UcretHesap({
           </p>
         </div>
         <div className="submit-btn">
-          <NavLink to="/siparis-ozeti">
             <button onClick={onClick} disabled={disabled} type="submit">
               SİPARİŞ VER
             </button>
-          </NavLink>
+          
         </div>
       </div>
     </div>

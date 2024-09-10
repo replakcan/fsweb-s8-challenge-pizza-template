@@ -9,6 +9,8 @@ import UcretHesap from "../components/SiparisFormu_ucretHesap";
 import IsimAlani from "../components/SiparisFormu_isimAlani";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
+import { Form } from "reactstrap";
 
 const initialSiparis = {
   adet: "",
@@ -70,6 +72,19 @@ function SiparisFormu() {
     }
   }, [siparis]);
 
+  const countHandler = (event) => {
+    const { id, value } = event.target;
+    if (id === "cikar") {
+      if (adet == 1) {
+        setAdet(1);
+      } else {
+        setAdet((adet) => adet - 1);
+      }
+    } else if (id === "ekle") {
+      setAdet((adet) => adet + 1);
+    }
+  };
+
   function handleInputChange(event) {
     let { id, name, value } = event.target;
 
@@ -89,16 +104,6 @@ function SiparisFormu() {
       }
     }
 
-    if (id === "cikar") {
-      if (adet == 1) {
-        setAdet(1);
-      } else {
-        setAdet((adet) => adet - 1);
-      }
-    } else if (id === "ekle") {
-      setAdet((adet) => adet + 1);
-    }
-
     if (name === "ek-malzeme") {
       if (siparis["ek-malzeme"].includes(value)) {
         setSiparis({
@@ -116,8 +121,18 @@ function SiparisFormu() {
     }
   }
 
+  let history = useHistory();
+
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (!isValid) {
+      console.log("h4t4");
+      return;
+    } else {
+      history.push("/siparis-ozeti");
+    }
+
     axios
       .post("https://reqres.in/api/pizza", siparis)
       .then((response) => {
@@ -126,14 +141,11 @@ function SiparisFormu() {
       .catch((error) => {
         console.log(error);
       });
-
   };
-
-
 
   console.log(siparis);
   return (
-    <section className="siparis-formu">
+    <Form onSubmit={handleSubmit} className="siparis-formu">
       <SiparisFormuHeader />
       <div className="form">
         <SiparisFormuInfo />
@@ -144,9 +156,7 @@ function SiparisFormu() {
             {boyutlar.map((boyut, index) => {
               return (
                 <PizzaBoyut
-                  className={
-                    index == 1 ? "data-cy-boyut" : ""
-                  }
+                  className={index == 1 ? "data-cy-boyut" : ""}
                   key={index}
                   boyut={boyut}
                   checked={siparis.boyut === boyut}
@@ -198,7 +208,7 @@ function SiparisFormu() {
           />
         </div>
         <UcretHesap
-          handleInputChange={handleInputChange}
+          handleInputChange={countHandler}
           adet={adet}
           ekMalzemeHesabi={siparis["ek-malzeme"].length * 5}
           toplamHesap={(pizza_ucreti + siparis["ek-malzeme"].length * 5) * adet}
@@ -206,7 +216,7 @@ function SiparisFormu() {
           onClick={handleSubmit}
         />
       </div>
-    </section>
+    </Form>
   );
 }
 
