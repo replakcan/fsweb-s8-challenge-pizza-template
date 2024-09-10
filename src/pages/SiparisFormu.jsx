@@ -159,6 +159,7 @@ function SiparisFormu() {
             {ekMalzemeler.map((malzeme, index) => {
               return (
                 <EkMalzemeler
+                  className={index >= 10 ? "data-cy-disabled" : "data-cy-not-disabled" }
                   key={index}
                   disabled={
                     siparis["ek-malzeme"].length >= 10 &&
