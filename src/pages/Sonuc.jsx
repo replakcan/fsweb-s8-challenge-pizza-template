@@ -1,8 +1,9 @@
 function Sonuc() {
   return (
-    <>
-      <p>Sonuc</p>
-    </>
+    <section className="siparis-ozet-sayfasi">
+      <img src="Assets/Iteration-1-assets/logo.svg" />
+      <p id="siparis-alindi">TEBRİKLER <br/> SİPARİŞİNİZ ALINDI!</p>
+    </section>
   );
 }
 

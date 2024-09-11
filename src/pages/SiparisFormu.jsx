@@ -30,7 +30,6 @@ const initialErrors = {
 
 const errorMessages = {
   isim: "İsim en az 3 karakter içermelidir.",
-
 };
 
 const pizza_ucreti = 85.5;
@@ -87,14 +86,14 @@ function SiparisFormu() {
 
   function handleInputChange(event) {
     let { name, value } = event.target;
-  
+
     if (name === "ek-malzeme") {
       if (siparis["ek-malzeme"].length < 4) {
-        setErrors({...errors, [name]: "en az 4 seçim yapmalısınız."})
-      }else {
-        setErrors({...errors, [name]: ""})
+        setErrors({ ...errors, [name]: "en az 4 seçim yapmalısınız." });
+      } else {
+        setErrors({ ...errors, [name]: "" });
       }
-    } 
+    }
 
     if (name === "isim") {
       if (value.length >= 3) {
@@ -145,6 +144,7 @@ function SiparisFormu() {
       .post("https://reqres.in/api/pizza", siparis)
       .then((response) => {
         console.log(response);
+
       })
       .catch((error) => {
         console.log(error);
@@ -203,7 +203,9 @@ function SiparisFormu() {
                 />
               );
             })}
-            {errors["ek-malzeme"] && <p className="error-message">{errors["ek-malzeme"]}</p>}
+            {errors["ek-malzeme"] && (
+              <p className="error-message">{errors["ek-malzeme"]}</p>
+            )}
           </div>
         </div>
         <div className="isim-alani">
