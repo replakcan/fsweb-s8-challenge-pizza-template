@@ -30,7 +30,7 @@ const initialErrors = {
 
 const errorMessages = {
   isim: "İsim en az 3 karakter içermelidir.",
-  "ek-malzeme": "En az 4 seçim yapmalısınız.",
+
 };
 
 const pizza_ucreti = 85.5;
@@ -87,6 +87,14 @@ function SiparisFormu() {
 
   function handleInputChange(event) {
     let { name, value } = event.target;
+  
+    if (name === "ek-malzeme") {
+      if (siparis["ek-malzeme"].length < 4) {
+        setErrors({...errors, [name]: "en az 4 seçim yapmalısınız."})
+      }else {
+        setErrors({...errors, [name]: ""})
+      }
+    } 
 
     if (name === "isim") {
       if (value.length >= 3) {
@@ -195,6 +203,7 @@ function SiparisFormu() {
                 />
               );
             })}
+            {errors["ek-malzeme"] && <p className="error-message">{errors["ek-malzeme"]}</p>}
           </div>
         </div>
         <div className="isim-alani">
