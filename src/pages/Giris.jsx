@@ -3,7 +3,7 @@ import Footer from "../layouts/Footer";
 
 function Giris() {
   return (
-    <div>
+    <div className="baslangic">
       <section className="giris">
         <GirisIcerik />
       </section>

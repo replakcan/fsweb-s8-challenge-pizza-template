@@ -30,18 +30,18 @@ export default function Footer() {
         </ul>
         <div className="trinity">
           <div className="tri-left">
-            <div>
+            <div className="left-card">
               <h3>Özel Lezzetus</h3>
               <p>Posisyone ebsoluşın acı yok burger</p>
               <button className="btnburak">SİPARİŞ VER</button>
             </div>
           </div>
-          <div>
-            <div className="tri-right">
+          <div className="tri-right">
+            <div className="right-card-one">
               <h4>Dechatlon Burger Menü</h4>
               <button className="btnburak">SİPARİŞ VER</button>
             </div>
-            <div className="tri-right">
+            <div className="right-card-two">
               <h4>Çoooook hızlı npm gibi kurye</h4>
               <button className="btnburak">SİPARİŞ VER</button>
             </div>
