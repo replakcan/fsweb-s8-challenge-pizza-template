@@ -31,25 +31,31 @@ export default function MainContent() {
         <div className="trinity">
           <div className="tri-left">
             <div className="left-card">
-              <h3>Özel Lezzetus</h3>
+              <h2>Özel <br/>Lezzetus</h2>
               <p>Posisyone ebsoluşın acı yok burger</p>
               <button className="btnburak">SİPARİŞ VER</button>
             </div>
           </div>
           <div className="tri-right">
             <div className="right-card-one">
-              <h4>Dechatlon Burger Menü</h4>
+              <h4>
+                Dechatlon <br />
+                Burger Menü
+              </h4>
               <button className="btnburak">SİPARİŞ VER</button>
             </div>
             <div className="right-card-two">
-              <h4>Çoooook hızlı npm gibi kurye</h4>
+              <h4>
+                Çoooook hızlı <br />
+                npm gibi kurye
+              </h4>
               <button className="btnburak">SİPARİŞ VER</button>
             </div>
           </div>
         </div>
-        <div>
+        <div className="text-container">
           <p>en çok paketlenen menüler</p>
-          <p>Acıktıran Kodlara Doyuran Lezzetler</p>
+          <p className="xlarge-yazi">Acıktıran Kodlara Doyuran Lezzetler</p>
         </div>
         <ul>
           <li>
@@ -81,28 +87,40 @@ export default function MainContent() {
           <div className="card">
             <img src="Assets/Iteration-2-aseets/pictures/food-1.png" />
             <div>
-                <h4>Terminal Pizza</h4>
-                <div>4.9
-                    <div> (200) 60₺</div>
+              <h4>Terminal Pizza</h4>
+              <div className="puantor">
+                4.9
+                <div>
+                  <p>(200)</p>
+                  <p>60₺</p>
                 </div>
+              </div>
             </div>
           </div>
           <div className="card">
             <img src="Assets/Iteration-2-aseets/pictures/food-2.png" />
             <div>
-                <h4>Acı yok raki burger</h4>
-                <div>4.9
-                    <div> (200) 60₺</div>
+              <h4>Acı yok raki burger</h4>
+              <div className="puantor">
+                4.9
+                <div>
+                  <p>(200)</p>
+                  <p>60₺</p>
                 </div>
+              </div>
             </div>
           </div>
           <div className="card">
             <img src="Assets/Iteration-2-aseets/pictures/food-3.png" />
             <div>
-                <h4>useEffect Tavuklu Burger</h4>
-                <div>4.9
-                    <div> (200) 60₺</div>
+              <h4>useEffect Tavuklu Burger</h4>
+              <div className="puantor">
+                4.9
+                <div>
+                  <p>(200)</p>
+                  <p>60₺</p>
                 </div>
+              </div>
             </div>
           </div>
         </div>
