@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
       </section>
       <div className="copyright">
-        <p>© 2023 Teknolojik Yemekler.</p>
+        <p>© 2024 Teknolojik Yemekler.</p>
         <img src="Assets/Iteration-2-aseets/footer/icons8-twitter.svg" alt="" />
       </div>
     </>
