@@ -323,13 +323,14 @@ button {
   padding: 2rem;
   display: flex;
   border-radius: 1rem;
+  
 }
 
 .right-card-one {
   background-image: url("Assets/Iteration-2-aseets/cta/kart-2.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 80%;
   padding: 1rem;
   padding-bottom: 6rem;
   border-radius: 1rem;
@@ -342,6 +343,7 @@ button {
   padding: 1rem;
   padding-bottom: 6rem;
   border-radius: 1rem;
+  background-position: 80%;
 }
 
 .main-container {
