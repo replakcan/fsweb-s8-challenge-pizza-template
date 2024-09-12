@@ -13,7 +13,6 @@ import { useHistory } from "react-router-dom";
 import { Form } from "reactstrap";
 
 const initialSiparis = {
-  adet: "",
   isim: "",
   boyut: "",
   hamur: "",

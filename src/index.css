@@ -282,18 +282,19 @@ button {
 .siparis-ozet-sayfasi {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100vh;
   background: #ce2829;
   color: white;
   font-family: "Roboto Condensed";
   text-align: center;
-  gap: 5rem;
-  font-weight: lighter;
-  line-height: 8rem;
 }
 
 #siparis-alindi {
-  font-size: 8rem;
+  font-size: 4rem;
+}
+
+*{
+  border: 1px solid black;
 }
