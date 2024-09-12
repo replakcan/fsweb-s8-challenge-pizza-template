@@ -5,21 +5,21 @@ export default function Footer() {
         <div>
           <img src="Assets/Iteration-2-aseets/footer/logo-footer.svg" />
           <div className="iconlu-bolum">
-            <div>
+            <div className="iconke">
               <img
                 src="Assets/Iteration-2-aseets/footer/icons/icon-1.png"
                 alt=""
               />
               <p>341 Londonderry Road, Istanbul Türkiye</p>
             </div>
-            <div>
+            <div className="iconke">
               <img
                 src="Assets/Iteration-2-aseets/footer/icons/icon-2.png"
                 alt=""
               />
               <p>aciktim@teknolojikyemekler.com</p>
             </div>
-            <div>
+            <div className="iconke">
               <img
                 src="Assets/Iteration-2-aseets/footer/icons/icon-3.png"
                 alt=""
@@ -37,9 +37,9 @@ export default function Footer() {
           <p>Testler Geçti Mutlu Burger</p>
           <p>Position Absolute Acı Burger</p>
         </div>
-        <div className="Insta">
+        <div className="insta">
           <h4>Instagram</h4>
-          <div>
+          <div className="insta-photos"> 
             <img src="Assets/Iteration-2-aseets/footer/insta/li-0.png" alt="" />
             <img src="Assets/Iteration-2-aseets/footer/insta/li-1.png" alt="" />
             <img src="Assets/Iteration-2-aseets/footer/insta/li-2.png" alt="" />
