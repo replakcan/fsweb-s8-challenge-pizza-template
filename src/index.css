@@ -466,21 +466,20 @@ h4 span {
 .iconlu-bolum {
   display: flex;
   flex-direction: column;
-  gap: .3rem;
+  gap: 0.3rem;
   margin-top: 2rem;
 }
 
 .iconke {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .menuler {
   display: flex;
   flex-direction: column;
   gap: 0;
-
 }
 
 .menuler h4 {
@@ -490,7 +489,7 @@ h4 span {
 .insta {
   display: flex;
   flex-direction: column;
-  gap: 2rem
+  gap: 2rem;
 }
 
 .insta-photos {
@@ -499,7 +498,7 @@ h4 span {
   align-items: center;
   align-content: center;
   justify-content: space-between;
-  gap: 1rem
+  gap: 1rem;
 }
 
 .copyright {

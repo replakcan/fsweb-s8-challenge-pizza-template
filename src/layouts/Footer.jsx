@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
         <div className="insta">
           <h4>Instagram</h4>
-          <div className="insta-photos"> 
+          <div className="insta-photos">
             <img src="Assets/Iteration-2-aseets/footer/insta/li-0.png" alt="" />
             <img src="Assets/Iteration-2-aseets/footer/insta/li-1.png" alt="" />
             <img src="Assets/Iteration-2-aseets/footer/insta/li-2.png" alt="" />
