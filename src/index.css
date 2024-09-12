@@ -21,6 +21,7 @@ h3 {
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
+  background: #FAF7F2;
   
 }
 
@@ -332,7 +333,7 @@ button {
   background-size: cover;
   background-position: 80%;
   padding: 1rem;
-  padding-bottom: 6rem;
+  padding-bottom: 7rem;
   border-radius: 1rem;
 }
 
@@ -341,7 +342,7 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 1rem;
-  padding-bottom: 6rem;
+  padding-bottom: 7rem;
   border-radius: 1rem;
   background-position: 80%;
 }
@@ -355,15 +356,22 @@ button {
   
 }
 
-li {
-  list-style-type: none;
-}
+
 
 ul {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   width: 100%;
+  background: white;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-wrap: wrap;
 }
 
 .trinity {
@@ -371,6 +379,7 @@ ul {
   gap: 1rem;
   width: 100%;
   color: white;
+  justify-content: center;
 }
 
 .tri-left,
@@ -389,6 +398,7 @@ ul {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .puantor {
@@ -400,14 +410,25 @@ ul {
 .puantor div {
   display: flex;
   gap: 2rem;
+
 }
 
 .xlarge-yazi {
   font-size: xx-large;
+  margin: 0;
 }
 
 .text-container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#satisfy {
+  font-family: "Satisfy";
+  margin: 0;
+  font-size: x-large;
+  color: #ce2829;
 }
 
 .left-card {
@@ -415,5 +436,26 @@ ul {
 }
 
 .left-card h2 {
-  font-size: 3rem;
+  font-size: 5rem;
+  font-family: "Quattrocento";
+}
+
+.trinity button {
+  border-radius: 1.5rem;
+  background-color: aliceblue;
+  color:#ce2829;
+  padding: .5rem 1rem;
+}
+
+h4 span {
+  color: #ce2829;
+}
+
+.right-card-two {
+  color: black;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 1rem;
 }

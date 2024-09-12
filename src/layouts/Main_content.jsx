@@ -62,7 +62,7 @@ export default function MainContent() {
             </div>
             <div className="right-card-two">
               <h4>
-                Çoooook hızlı <br />
+                <span>Çoooook hızlı</span> <br />
                 npm gibi kurye
               </h4>
               <button className="btnburak">SİPARİŞ VER</button>
@@ -70,10 +70,10 @@ export default function MainContent() {
           </div>
         </div>
         <div className="text-container">
-          <p>en çok paketlenen menüler</p>
+          <p id="satisfy">en çok paketlenen menüler</p>
           <p className="xlarge-yazi">Acıktıran Kodlara Doyuran Lezzetler</p>
         </div>
-        <ul>
+        <ul className="ul_iki">
           <li>
             <img src="Assets/Iteration-2-aseets/icons/1.svg" />
             YENİ! Kore
