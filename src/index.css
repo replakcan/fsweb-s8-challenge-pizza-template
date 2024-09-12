@@ -20,6 +20,9 @@ h3 {
   background-size: cover;
   text-align: center;
   padding: 10% 20%;
+  color: white;
+  line-height: 7rem;
+  font-weight: lighter;
 }
 
 #slogan {
@@ -30,6 +33,7 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  text-align: center;
 }
 
 .giris-icerik img {
@@ -38,12 +42,13 @@ h3 {
 }
 
 .giris-btn {
-  padding: 1rem 3.5rem;
+  padding: 1rem 4.5rem;
   border: 1px solid #fdc913;
   border-radius: 3rem;
   font-weight: bold;
-  font-size: large;
+  font-size: x-large;
   background: #fdc913;
+  line-height: 2rem;
 }
 
 .siparis-formu {
