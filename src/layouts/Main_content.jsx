@@ -1,7 +1,19 @@
+import { NavLink } from "react-router-dom";
+
 export default function MainContent() {
   return (
     <>
       <section className="main-container">
+        <div className="giris-icerik">
+          <img src="Assets/Iteration-1-assets/logo.svg" />
+          <p id="slogan">
+            KOD ACIKTIRIR, <br /> PİZZA DOYURUR
+          </p>
+
+          <NavLink to="/siparis-formu">
+            <button className="giris-btn">ACIKTIM</button>
+          </NavLink>
+        </div>
         <ul>
           <li>
             <img src="Assets/Iteration-2-aseets/icons/1.svg" />
@@ -31,7 +43,10 @@ export default function MainContent() {
         <div className="trinity">
           <div className="tri-left">
             <div className="left-card">
-              <h2>Özel <br/>Lezzetus</h2>
+              <h2>
+                Özel <br />
+                Lezzetus
+              </h2>
               <p>Posisyone ebsoluşın acı yok burger</p>
               <button className="btnburak">SİPARİŞ VER</button>
             </div>
