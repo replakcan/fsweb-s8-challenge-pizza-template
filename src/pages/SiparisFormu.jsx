@@ -11,6 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { Form } from "reactstrap";
+import Footer from "../layouts/Footer";
 
 const initialSiparis = {
   isim: "",
@@ -155,6 +156,7 @@ function SiparisFormu() {
 
   console.log(siparis);
   return (
+    <>
     <Form onSubmit={handleSubmit} className="siparis-formu">
       <SiparisFormuHeader />
       <div className="form">
@@ -230,6 +232,8 @@ function SiparisFormu() {
         />
       </div>
     </Form>
+    <Footer />
+    </>
   );
 }
 
