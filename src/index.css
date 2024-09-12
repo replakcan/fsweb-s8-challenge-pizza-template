@@ -344,3 +344,13 @@ ul {
 .tri-left {
   display: flex;
 }
+
+.left-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+}
+
+.tri-left, .right-card-one, .right-card-two {
+  padding: 1rem;
+}
