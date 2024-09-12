@@ -6,6 +6,8 @@
 * {
   padding: 0;
   margin: 0;
+  border: 1px solid black;
+  background:rgb(35, 128, 131, 0.3);
 }
 
 h3 {
@@ -16,6 +18,10 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  
 }
 
 #slogan {
@@ -27,6 +33,11 @@ h3 {
   flex-direction: column;
   gap: 2rem;
   text-align: center;
+  
+  width: 100%;
+  background-image: url("Assets/Iteration-1-assets/home-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .giris-icerik img {
@@ -288,10 +299,6 @@ button {
   font-size: 4rem;
 }
 
-* {
-  border: 1px solid black;
-}
-
 .tri-left {
   background-image: url("Assets/Iteration-2-aseets/cta/kart-1.png");
   background-repeat: no-repeat;
@@ -323,6 +330,7 @@ button {
   align-items: center;
   flex: 1;
   gap: 1rem;
+  
 }
 
 li {
