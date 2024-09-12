@@ -1,10 +1,11 @@
-import PizzaBoyut from "../components/SiparisFormu_pizzaBoyut";
+import Footer from "../layouts/Footer";
 import SiparisFormu from "./SiparisFormu";
 
 SiparisFormu
 
 function Sonuc({boyut}) {
   return (
+    <>
     <section className="siparis-ozet-sayfasi">
       <img src="Assets/Iteration-1-assets/logo.svg" />
       <div><p>lezzetin yolda</p>
@@ -21,6 +22,9 @@ function Sonuc({boyut}) {
         <p>Toplam______{boyut}</p>
       </div>
     </section>
+    <Footer />
+    </>
+    
   );
 }
 
