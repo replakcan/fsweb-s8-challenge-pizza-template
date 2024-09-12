@@ -4,14 +4,15 @@ export default function MainContent() {
   return (
     <>
       <div className="giris-icerik">
-        <img src="Assets/Iteration-1-assets/logo.svg" />
-        <p id="slogan">
-          KOD ACIKTIRIR, <br /> PİZZA DOYURUR
-        </p>
-
-        <NavLink to="/siparis-formu">
-          <button className="giris-btn">ACIKTIM</button>
-        </NavLink>
+        <div className="giris-content">
+          <img src="Assets/Iteration-1-assets/logo.svg" />
+          <p id="slogan">
+            KOD ACIKTIRIR <br /> PİZZA DOYURUR
+          </p>
+          <NavLink to="/siparis-formu">
+            <button className="giris-btn">ACIKTIM</button>
+          </NavLink>
+        </div>
       </div>
       <section className="main-container">
         <ul>
