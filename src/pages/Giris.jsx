@@ -1,5 +1,5 @@
 import GirisIcerik from "../components/Giris_Icerik";
-import Footer from "../layouts/Footer";
+import MainContent from "../layouts/Main_content";
 
 function Giris() {
   return (
@@ -7,7 +7,7 @@ function Giris() {
       <section className="giris">
         <GirisIcerik />
       </section>
-      <Footer />
+      <MainContent />
     </div>
   );
 }
