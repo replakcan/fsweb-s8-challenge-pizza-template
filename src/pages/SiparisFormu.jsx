@@ -24,7 +24,7 @@ const initialErrors = {
   isim: "",
   boyut: "zorunlu alan*",
   hamur: "zorunlu alan*",
-  "ek-malzeme": "",
+  "ek-malzeme": "En az 4 seçim yapmalısınız.",
 };
 
 const errorMessages = {
@@ -85,14 +85,15 @@ function SiparisFormu() {
   };
 
   function handleInputChange(event) {
-    let { name, value } = event.target;
+    let { name, value, checked } = event.target;
     console.log(event);
+    
 
     if (name === "ek-malzeme") {
-      if (siparis["ek-malzeme"].length < 4) {
-        setErrors({ ...errors, [name]: errorMessages["ek-malzeme"] });
-      } else {
+      if (siparis["ek-malzeme"].length >= 4) {
         setErrors({ ...errors, [name]: "" });
+      } else {
+        setErrors({ ...errors, [name]: errorMessages["ek-malzeme"] });
       }
     }
 
