@@ -27,7 +27,7 @@ const initialErrors = {
   isim: "",
   boyut: "zorunlu alan*",
   hamur: "zorunlu alan*",
-  "ek-malzeme": "En az 4 seçim yapmalısınız.",
+  "ek-malzeme": "",
 };
 
 const errorMessages = {
@@ -86,17 +86,12 @@ function SiparisFormu({ setUserChoices }) {
       setAdet((adet) => adet + 1);
     }
   };
+  
 
   function handleInputChange(event) {
     let { name, value } = event.target;
 
-    if (name === "ek-malzeme") {
-      if (siparis["ek-malzeme"].length >= 4) {
-        setErrors({ ...errors, [name]: "" });
-      } else {
-        setErrors({ ...errors, [name]: errorMessages["ek-malzeme"] });
-      }
-    }
+    
 
     if (name === "isim") {
       if (value.length >= 3) {
@@ -129,7 +124,16 @@ function SiparisFormu({ setUserChoices }) {
     } else {
       setSiparis({ ...siparis, [name]: value });
     }
+
+    if (name === "ek-malzeme") {
+      if (siparis["ek-malzeme"].length >= 4) {
+        setErrors({ ...errors, [name]: "" });
+      } else {
+        setErrors({ ...errors, [name]: errorMessages["ek-malzeme"] });
+      }
+    }
   }
+  console.log("ek malzeomos: ", siparis["ek-malzeme"].length)
 
   siparis.secimler = siparis["ek-malzeme"].length * 5;
   siparis.toplam_ucret = adet * (siparis.secimler + pizza_ucreti);
@@ -205,6 +209,7 @@ function SiparisFormu({ setUserChoices }) {
                     onChange={handleInputChange}
                     malzeme={malzeme}
                     checked={siparis["ek-malzeme"].includes(malzeme)}
+                    
                   />
                 );
               })}
