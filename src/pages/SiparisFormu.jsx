@@ -95,8 +95,6 @@ function SiparisFormu({ setUserChoices }) {
 
   function handleInputChange(event) {
     let { name, value } = event.target;
-    console.log(event);
-    console.log(errors);
 
     if (name === "ek-malzeme") {
       if (siparis["ek-malzeme"].includes(value)) {
@@ -130,7 +128,6 @@ function SiparisFormu({ setUserChoices }) {
       }
     }
   }
-  console.log("ek malzeomos: ", siparis["ek-malzeme"].length);
 
   siparis.secimler = siparis["ek-malzeme"].length * 5;
   siparis.toplam_ucret = adet * (siparis.secimler + pizza_ucreti);
