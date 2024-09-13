@@ -173,7 +173,7 @@ function SiparisFormu({ setUserChoices }) {
                     key={index}
                     boyut={boyut}
                     checked={siparis.boyut === boyut}
-                    handleInputChange={handleInputChange}
+                    onChange={handleInputChange}
                   />
                 );
               })}
@@ -202,7 +202,7 @@ function SiparisFormu({ setUserChoices }) {
                       siparis["ek-malzeme"].length >= 10 &&
                       !siparis["ek-malzeme"].includes(malzeme)
                     }
-                    handleInputChange={handleInputChange}
+                    onChange={handleInputChange}
                     malzeme={malzeme}
                     checked={siparis["ek-malzeme"].includes(malzeme)}
                   />

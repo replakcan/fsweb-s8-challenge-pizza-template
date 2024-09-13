@@ -1,5 +1,5 @@
 export default function PizzaBoyut({
-  handleInputChange,
+  onChange,
   boyut,
   checked,
   className,
@@ -12,7 +12,7 @@ export default function PizzaBoyut({
           type="radio"
           name="boyut"
           value={boyut}
-          onChange={handleInputChange}
+          onChange={onChange}
           checked={checked}
         />
         {boyut}

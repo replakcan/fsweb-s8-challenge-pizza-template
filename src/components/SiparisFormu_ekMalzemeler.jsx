@@ -1,6 +1,6 @@
 export default function EkMalzemeler({
   disabled,
-  handleInputChange,
+  onChange,
   malzeme,
   checked,
   className,
@@ -14,7 +14,7 @@ export default function EkMalzemeler({
           type="checkbox"
           name="ek-malzeme"
           value={malzeme}
-          onChange={handleInputChange}
+          onChange={onChange}
           checked={checked}
         />
         {malzeme}
