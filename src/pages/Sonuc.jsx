@@ -12,20 +12,30 @@ function Sonuc({ userChoices }) {
         <div>
           <h3>Poisition Absolute Acı Pizza</h3>
           <div>
-            <p>Boyut: {userChoices.boyut}</p>
-            <p>Hamur: {userChoices.hamur}</p>
-            <p>Ek Malzemeler: {userChoices["ek-malzeme"]}</p>
+            <p>
+              Boyut: <strong>{userChoices.boyut}</strong>
+            </p>
+            <p>
+              Hamur: <strong>{userChoices.hamur}</strong>
+            </p>
+            <p>
+              Ek Malzemeler: <strong>{userChoices["ek-malzeme"]}</strong>
+            </p>
           </div>
         </div>
         <div className="price-container">
           <h3>Sipariş Toplamı </h3>
           <div className="secim-harci">
             <p>Seçimler</p>
-            <p>{userChoices.secimler}.00₺</p>
+            <p>
+              <strong>{userChoices.secimler}.00₺</strong>
+            </p>
           </div>
           <div className="secim-harci">
             <p>Toplam</p>
-            <p>{userChoices.toplam_ucret}.00₺</p>
+            <p>
+              <strong>{userChoices.toplam_ucret}.00₺</strong>
+            </p>
           </div>
         </div>
       </section>
