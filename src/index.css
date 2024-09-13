@@ -590,4 +590,15 @@ h4 span {
   .trinity {
     width: 80%;
   }
+
+  .hesap-butonlari {
+    flex-direction: column-reverse;
+  }
+
+  .siparis-toplami {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
 }
