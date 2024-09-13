@@ -3,8 +3,12 @@ import { Switch, Route } from "react-router-dom";
 import SiparisFormu from "./pages/SiparisFormu";
 import Giris from "./pages/Giris";
 import Sonuc from "./pages/Sonuc";
+import { useState } from "react";
 
 function App() {
+  const [userChoices, setUserChoices] = useState({});
+
+  console.log(userChoices);
   return (
     <>
       <Switch>
@@ -14,12 +18,12 @@ function App() {
       </Switch>
       <Switch>
         <Route path="/siparis-formu">
-          <SiparisFormu />
+          <SiparisFormu setUserChoices={setUserChoices} />
         </Route>
       </Switch>
       <Switch>
         <Route path="/siparis-ozeti">
-          <Sonuc />
+          <Sonuc userChoices={userChoices} />
         </Route>
       </Switch>
     </>

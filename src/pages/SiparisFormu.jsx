@@ -19,6 +19,8 @@ const initialSiparis = {
   hamur: "",
   "ek-malzeme": "",
   "siparis-notu": "",
+  secimler: 0,
+  toplam_ucret: 0,
 };
 
 const initialErrors = {
@@ -53,7 +55,7 @@ const ekMalzemeler = [
   "Kabak",
 ];
 
-function SiparisFormu() {
+function SiparisFormu({ setUserChoices }) {
   const [siparis, setSiparis] = useState(initialSiparis);
   const [errors, setErrors] = useState(initialErrors);
   const [isValid, setIsValid] = useState(false);
@@ -87,7 +89,6 @@ function SiparisFormu() {
 
   function handleInputChange(event) {
     let { name, value } = event.target;
-    console.log(event);
 
     if (name === "ek-malzeme") {
       if (siparis["ek-malzeme"].length >= 4) {
@@ -130,6 +131,8 @@ function SiparisFormu() {
     }
   }
 
+  siparis.secimler = siparis["ek-malzeme"].length * 5;
+  siparis.toplam_ucret = adet * (siparis.secimler + pizza_ucreti);
   let history = useHistory();
 
   const handleSubmit = (event) => {
@@ -145,14 +148,14 @@ function SiparisFormu() {
     axios
       .post("https://reqres.in/api/pizza", siparis)
       .then((response) => {
-        console.log(response);
+        console.log("RESPONSE", response.data);
+        setUserChoices(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
   };
 
-  console.log(siparis);
   return (
     <>
       <Form onSubmit={handleSubmit} className="siparis-formu">
