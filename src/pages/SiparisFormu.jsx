@@ -212,9 +212,7 @@ function SiparisFormu({ setUserChoices }) {
                 );
               })}
             </div>
-            {siparis["ek-malzeme"].length < 4 && (
-              <p className="error-message">En az 4 seçim yapmalısınız.</p>
-            )}
+            {errors["ek-malzeme"] && <p className="error-message">{errors["ek-malzeme"]}</p>}
           </div>
           <div className="isim-alani">
             <IsimAlani isim={siparis.isim} onChange={handleInputChange} />
