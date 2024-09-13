@@ -15,7 +15,7 @@ export default function MainContent() {
         </div>
       </div>
       <section className="main-container">
-        <ul>
+        <ul className="ul_bir">
           <li>
             <img src="Assets/Iteration-2-aseets/icons/1.svg" />
             YENİ! Kore
