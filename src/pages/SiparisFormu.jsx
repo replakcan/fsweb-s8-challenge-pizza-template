@@ -86,7 +86,7 @@ function SiparisFormu() {
   };
 
   function handleInputChange(event) {
-    let { name, value, checked } = event.target;
+    let { name, value } = event.target;
     console.log(event);
 
     if (name === "ek-malzeme") {

@@ -1,9 +1,6 @@
 import Footer from "../layouts/Footer";
-import SiparisFormu from "./SiparisFormu";
 
-SiparisFormu;
-
-function Sonuc({ boyut }) {
+function Sonuc() {
   return (
     <>
       <section className="siparis-ozet-sayfasi">
@@ -13,17 +10,17 @@ function Sonuc({ boyut }) {
           <p id="siparis-alindi"> SİPARİŞ ALINDI!</p>
         </div>
         <div>
-        <h3>Poisition Absolute Acı Pizza</h3>
-        <div>
-          <p>Boyut: {}</p>
-          <p>Hamur: {boyut}</p>
-          <p>Ek Malzemeler: {boyut}</p>
-        </div>
+          <h3>Poisition Absolute Acı Pizza</h3>
+          <div>
+            <p>Boyut: {}</p>
+            <p>Hamur: </p>
+            <p>Ek Malzemeler: </p>
+          </div>
         </div>
         <div className="price-container">
           <p>Sipariş Toplamı </p>
-          <p>Seçimler______{boyut}</p>
-          <p>Toplam______{boyut}</p>
+          <p>Seçimler______</p>
+          <p>Toplam______</p>
         </div>
       </section>
       <Footer />

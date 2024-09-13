@@ -1,13 +1,11 @@
 import { NavLink, useHistory } from "react-router-dom";
 
 export default function MainContent() {
-
-
   let history = useHistory();
 
   const handleClick = () => {
     history.push("/siparis-formu");
-  }
+  };
 
   return (
     <>
@@ -61,7 +59,9 @@ export default function MainContent() {
                 Lezzetus
               </h2>
               <p>Posisyone ebsoluşın acı yok burger</p>
-              <button onClick={handleClick} className="btnburak">SİPARİŞ VER</button>
+              <button onClick={handleClick} className="btnburak">
+                SİPARİŞ VER
+              </button>
             </div>
           </div>
           <div className="tri-right">
@@ -70,14 +70,18 @@ export default function MainContent() {
                 Dechatlon <br />
                 Burger Menü
               </h4>
-              <button onClick={handleClick} className="btnburak">SİPARİŞ VER</button>
+              <button onClick={handleClick} className="btnburak">
+                SİPARİŞ VER
+              </button>
             </div>
             <div className="right-card-two">
               <h4>
                 <span>Çoooook hızlı</span> <br />
                 npm gibi kurye
               </h4>
-              <button onClick={handleClick} className="btnburak">SİPARİŞ VER</button>
+              <button onClick={handleClick} className="btnburak">
+                SİPARİŞ VER
+              </button>
             </div>
           </div>
         </div>
