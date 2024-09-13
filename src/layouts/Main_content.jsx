@@ -106,9 +106,9 @@ export default function MainContent() {
               <h4>Terminal Pizza</h4>
               <div className="puantor">
                 4.9
-                <div>
+                <div className="card-item-points">
                   <p>(200)</p>
-                  <p>60₺</p>
+                  <p><strong>60₺</strong></p>
                 </div>
               </div>
             </div>
@@ -119,9 +119,9 @@ export default function MainContent() {
               <h4>Acı yok raki burger</h4>
               <div className="puantor">
                 4.9
-                <div>
+                <div className="card-item-points">
                   <p>(200)</p>
-                  <p>60₺</p>
+                  <p><strong>60₺</strong></p>
                 </div>
               </div>
             </div>
@@ -132,9 +132,9 @@ export default function MainContent() {
               <h4>useEffect Tavuklu Burger</h4>
               <div className="puantor">
                 4.9
-                <div>
+                <div className="card-item-points">
                   <p>(200)</p>
-                  <p>60₺</p>
+                  <p><strong>60₺</strong></p>
                 </div>
               </div>
             </div>

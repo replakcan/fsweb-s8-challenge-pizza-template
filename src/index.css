@@ -432,6 +432,11 @@ li {
 .xlarge-yazi {
   font-size: xx-large;
   margin: 0;
+  font-weight: bold;
+}
+
+.card-item-points p {
+  margin: 0;
 }
 
 .text-container {
@@ -471,6 +476,10 @@ h4 span {
 .card {
   padding: 1rem;
   border-radius: 1rem;
+}
+
+.card h4 {
+  font-weight: bold;
 }
 
 .footer-section {
@@ -536,6 +545,9 @@ h4 span {
     width: 100%;
     flex-wrap: nowrap;
     gap: 0;
+  }
+  .left-card h2 {
+    font-size: 5rem;
   }
 }
 
