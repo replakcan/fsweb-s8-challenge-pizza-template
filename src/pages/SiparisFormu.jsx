@@ -90,6 +90,7 @@ function SiparisFormu({ setUserChoices }) {
   function handleInputChange(event) {
     let { name, value } = event.target;
     console.log(event);
+    console.log(errors);
 
     if (name === "ek-malzeme") {
       if (siparis["ek-malzeme"].includes(value)) {
