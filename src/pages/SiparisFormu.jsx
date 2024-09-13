@@ -72,6 +72,12 @@ function SiparisFormu({ setUserChoices }) {
     } else {
       setIsValid(false);
     }
+
+    if (siparis["ek-malzeme"].length >= 4) {
+      setErrors({ ...errors, ["ek-malzeme"]: "" });
+    } else {
+      setErrors({ ...errors, ["ek-malzeme"]: errorMessages["ek-malzeme"] });
+    }
   }, [siparis]);
 
   const countHandler = (event) => {
@@ -106,14 +112,6 @@ function SiparisFormu({ setUserChoices }) {
       }
     } else {
       setSiparis({ ...siparis, [name]: value });
-    }
-
-    if (name === "ek-malzeme") {
-      if (siparis["ek-malzeme"].length >= 4) {
-        setErrors({ ...errors, [name]: "" });
-      } else {
-        setErrors({ ...errors, [name]: errorMessages["ek-malzeme"] });
-      }
     }
 
     if (name === "isim") {
@@ -212,7 +210,9 @@ function SiparisFormu({ setUserChoices }) {
                 );
               })}
             </div>
-            {errors["ek-malzeme"] && <p className="error-message">{errors["ek-malzeme"]}</p>}
+            {errors["ek-malzeme"] && (
+              <p className="error-message">{errors["ek-malzeme"]}</p>
+            )}
           </div>
           <div className="isim-alani">
             <IsimAlani isim={siparis.isim} onChange={handleInputChange} />
