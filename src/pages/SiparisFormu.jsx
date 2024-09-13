@@ -208,10 +208,10 @@ function SiparisFormu({ setUserChoices }) {
                   />
                 );
               })}
-              {errors["ek-malzeme"] && (
-                <p className="error-message">{errors["ek-malzeme"]}</p>
-              )}
             </div>
+            {errors["ek-malzeme"] && (
+              <p className="error-message">{errors["ek-malzeme"]}</p>
+            )}
           </div>
           <div className="isim-alani">
             <IsimAlani isim={siparis.isim} onChange={handleInputChange} />
