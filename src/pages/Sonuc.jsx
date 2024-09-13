@@ -8,17 +8,19 @@ function Sonuc({ boyut }) {
     <>
       <section className="siparis-ozet-sayfasi">
         <img src="Assets/Iteration-1-assets/logo.svg" />
-        <div>
-          <p>lezzetin yolda</p>
+        <div className="sonuc-text">
+          <p className="lezzet">lezzetin yolda</p>
           <p id="siparis-alindi"> SİPARİŞ ALINDI!</p>
         </div>
-        <p>Poisition Absolute Acı Pizza</p>
+        <div>
+        <h3>Poisition Absolute Acı Pizza</h3>
         <div>
           <p>Boyut: {}</p>
           <p>Hamur: {boyut}</p>
           <p>Ek Malzemeler: {boyut}</p>
         </div>
-        <div>
+        </div>
+        <div className="price-container">
           <p>Sipariş Toplamı </p>
           <p>Seçimler______{boyut}</p>
           <p>Toplam______{boyut}</p>
