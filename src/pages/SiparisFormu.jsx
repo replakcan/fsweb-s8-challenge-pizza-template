@@ -86,28 +86,9 @@ function SiparisFormu({ setUserChoices }) {
       setAdet((adet) => adet + 1);
     }
   };
-  
 
   function handleInputChange(event) {
     let { name, value } = event.target;
-
-    
-
-    if (name === "isim") {
-      if (value.length >= 3) {
-        setErrors({ ...errors, [name]: "" });
-      } else {
-        setErrors({ ...errors, [name]: errorMessages.isim });
-      }
-    }
-
-    if (name === "boyut" || name === "hamur") {
-      if (siparis.boyut !== "") {
-        setErrors({ ...errors, [name]: "" });
-      } else {
-        setErrors({ ...errors, [name]: errorMessages.boyut });
-      }
-    }
 
     if (name === "ek-malzeme") {
       if (siparis["ek-malzeme"].includes(value)) {
@@ -132,8 +113,24 @@ function SiparisFormu({ setUserChoices }) {
         setErrors({ ...errors, [name]: errorMessages["ek-malzeme"] });
       }
     }
+
+    if (name === "isim") {
+      if (value.length >= 3) {
+        setErrors({ ...errors, [name]: "" });
+      } else {
+        setErrors({ ...errors, [name]: errorMessages.isim });
+      }
+    }
+
+    if (name === "boyut" || name === "hamur") {
+      if (siparis.boyut !== "") {
+        setErrors({ ...errors, [name]: "" });
+      } else {
+        setErrors({ ...errors, [name]: errorMessages.boyut });
+      }
+    }
   }
-  console.log("ek malzeomos: ", siparis["ek-malzeme"].length)
+  console.log("ek malzeomos: ", siparis["ek-malzeme"].length);
 
   siparis.secimler = siparis["ek-malzeme"].length * 5;
   siparis.toplam_ucret = adet * (siparis.secimler + pizza_ucreti);
@@ -207,9 +204,8 @@ function SiparisFormu({ setUserChoices }) {
                       !siparis["ek-malzeme"].includes(malzeme)
                     }
                     onChange={handleInputChange}
-                    malzeme={malzeme}
+                    value={malzeme}
                     checked={siparis["ek-malzeme"].includes(malzeme)}
-                    
                   />
                 );
               })}

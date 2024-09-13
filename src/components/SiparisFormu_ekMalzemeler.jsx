@@ -1,7 +1,7 @@
 export default function EkMalzemeler({
   disabled,
   onChange,
-  malzeme,
+  value,
   checked,
   className,
 }) {
@@ -13,11 +13,11 @@ export default function EkMalzemeler({
           disabled={disabled}
           type="checkbox"
           name="ek-malzeme"
-          value={malzeme}
+          value={value}
           onChange={onChange}
           checked={checked}
         />
-        {malzeme}
+        {value}
       </label>
     </>
   );
