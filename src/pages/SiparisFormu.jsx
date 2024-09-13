@@ -89,6 +89,7 @@ function SiparisFormu({ setUserChoices }) {
 
   function handleInputChange(event) {
     let { name, value } = event.target;
+    console.log(event);
 
     if (name === "ek-malzeme") {
       if (siparis["ek-malzeme"].includes(value)) {
@@ -210,8 +211,8 @@ function SiparisFormu({ setUserChoices }) {
                 );
               })}
             </div>
-            {errors["ek-malzeme"] && (
-              <p className="error-message">{errors["ek-malzeme"]}</p>
+            {siparis["ek-malzeme"].length < 4 && (
+              <p className="error-message">En az 4 seçim yapmalısınız.</p>
             )}
           </div>
           <div className="isim-alani">
