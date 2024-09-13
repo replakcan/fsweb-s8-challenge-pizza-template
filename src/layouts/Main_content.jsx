@@ -6,9 +6,13 @@ export default function MainContent() {
       <div className="giris-icerik">
         <div className="giris-content">
           <img src="Assets/Iteration-1-assets/logo.svg" />
-          <p id="slogan">
-            KOD ACIKTIRIR <br /> PİZZA DOYURUR
-          </p>
+          <div>
+            <p id="firsat">fırsatı kaçırma</p>
+            <p id="slogan">
+              KOD ACIKTIRIR <br /> PİZZA DOYURUR
+            </p>
+          </div>
+
           <NavLink to="/siparis-formu">
             <button className="giris-btn">ACIKTIM</button>
           </NavLink>
@@ -108,7 +112,9 @@ export default function MainContent() {
                 4.9
                 <div className="card-item-points">
                   <p>(200)</p>
-                  <p><strong>60₺</strong></p>
+                  <p>
+                    <strong>60₺</strong>
+                  </p>
                 </div>
               </div>
             </div>
@@ -121,7 +127,9 @@ export default function MainContent() {
                 4.9
                 <div className="card-item-points">
                   <p>(200)</p>
-                  <p><strong>60₺</strong></p>
+                  <p>
+                    <strong>60₺</strong>
+                  </p>
                 </div>
               </div>
             </div>
@@ -134,7 +142,9 @@ export default function MainContent() {
                 4.9
                 <div className="card-item-points">
                   <p>(200)</p>
-                  <p><strong>60₺</strong></p>
+                  <p>
+                    <strong>60₺</strong>
+                  </p>
                 </div>
               </div>
             </div>

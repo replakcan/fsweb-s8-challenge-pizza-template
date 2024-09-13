@@ -39,8 +39,15 @@ h3 {
   font-size: 4rem;
   color: white;
   line-height: 4rem;
-  margin: 3rem 0 0 0;
+  margin-top: 0;
   font-weight: lighter;
+}
+
+#firsat {
+  margin-bottom: 0;
+  font-family: "Satisfy";
+  color:#fdc913;
+  font-size: x-large;
 }
 
 .giris-icerik {
@@ -576,7 +583,7 @@ h4 span {
     margin: 0 auto;
     font-size: 4rem;
     line-height: 5rem;
-    margin-top: 2rem;
+    margin-top: 0;
     margin-bottom: 2rem;
   }
 
