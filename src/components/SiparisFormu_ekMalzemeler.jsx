@@ -16,7 +16,7 @@ export default function EkMalzemeler({
           value={malzeme}
           onChange={handleInputChange}
           checked={checked}
-        />{" "}
+        />
         {malzeme}
       </label>
     </>

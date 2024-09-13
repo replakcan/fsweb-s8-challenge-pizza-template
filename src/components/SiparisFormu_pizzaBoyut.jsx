@@ -1,4 +1,9 @@
-export default function PizzaBoyut({handleInputChange, boyut, checked, className}) {
+export default function PizzaBoyut({
+  handleInputChange,
+  boyut,
+  checked,
+  className,
+}) {
   return (
     <>
       <label>
@@ -9,7 +14,7 @@ export default function PizzaBoyut({handleInputChange, boyut, checked, className
           value={boyut}
           onChange={handleInputChange}
           checked={checked}
-        />{" "}
+        />
         {boyut}
       </label>
     </>
