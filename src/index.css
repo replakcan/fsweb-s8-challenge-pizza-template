@@ -55,7 +55,7 @@ h3 {
   text-align: center;
   width: 100%;
   aspect-ratio: 2/1;
-  background-image: url('./assets/iteration-1-assets/home-banner.png');
+  background-image: url("/images/iteration-1-assets/home-banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -100,7 +100,7 @@ h3 {
   max-width: 600px;
   margin: 0 auto;
   padding: 1rem;
-  font-family: 'Barlow';
+  font-family: "Barlow";
 }
 
 .content-div {
@@ -313,7 +313,7 @@ button {
   align-items: center;
   background: #ce2829;
   color: white;
-  font-family: 'Roboto Condensed';
+  font-family: "Roboto Condensed";
   text-align: center;
   padding-top: 3rem;
   padding-bottom: 8rem;
@@ -345,7 +345,7 @@ button {
 }
 
 .tri-left {
-  background-image: url('./assets/iteration-2-aseets/cta/kart-1.png');
+  background-image: url("/images/iteration-2-aseets/cta/kart-1.png");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 1rem;
@@ -357,7 +357,7 @@ button {
 }
 
 .right-card-one {
-  background-image: url('./assets/iteration-2-aseets/cta/kart-2.png');
+  background-image: url("/images/iteration-2-aseets/cta/kart-2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 80%;
@@ -367,7 +367,7 @@ button {
 }
 
 .right-card-two {
-  background-image: url('./assets/iteration-2-aseets/cta/kart-3.png');
+  background-image: url("/images/iteration-2-aseets/cta/kart-3.png");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 1rem;
@@ -475,7 +475,7 @@ li {
 }
 
 #satisfy {
-  font-family: 'Satisfy';
+  font-family: "Satisfy";
   margin: 0;
   font-size: x-large;
   color: #ce2829;
@@ -483,7 +483,7 @@ li {
 
 .left-card h2 {
   font-size: 2rem;
-  font-family: 'Quattrocento';
+  font-family: "Quattrocento";
 }
 
 .trinity button {
@@ -569,7 +569,7 @@ h4 span {
 }
 
 .lezzet {
-  font-family: 'Satisfy';
+  font-family: "Satisfy";
   color: #fdc913;
   font-size: x-large;
   margin-bottom: 0;

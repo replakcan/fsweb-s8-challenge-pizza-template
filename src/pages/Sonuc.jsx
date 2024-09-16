@@ -4,7 +4,7 @@ function Sonuc({ userChoices }) {
   return (
     <>
       <section className="siparis-ozet-sayfasi">
-        <img src="assets/iteration-1-assets/logo.svg" />
+        <img src="./images/iteration-1-assets/logo.svg" />
         <div className="sonuc-text">
           <p className="lezzet">lezzetin yolda</p>
           <p id="siparis-alindi"> SİPARİŞ ALINDI!</p>
