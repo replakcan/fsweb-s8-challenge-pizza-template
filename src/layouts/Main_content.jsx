@@ -11,7 +11,7 @@ export default function MainContent() {
     <>
       <div className="giris-icerik">
         <div className="giris-content">
-          <img src="Assets/Iteration-1-assets/logo.svg" />
+          <img src="assets/iteration-1-assets/logo.svg" />
           <div>
             <p id="firsat">fırsatı kaçırma</p>
             <p id="slogan">
@@ -27,27 +27,27 @@ export default function MainContent() {
       <section className="main-container">
         <ul className="ul_bir">
           <li>
-            <img src="Assets/Iteration-2-aseets/icons/1.svg" />
+            <img src="assets/iteration-2-aseets/icons/1.svg" />
             YENİ! Kore
           </li>
           <li>
-            <img src="Assets/Iteration-2-aseets/icons/2.svg" />
+            <img src="assets/iteration-2-aseets/icons/2.svg" />
             Pizza
           </li>
           <li>
-            <img src="Assets/Iteration-2-aseets/icons/3.svg" />
+            <img src="assets/iteration-2-aseets/icons/3.svg" />
             Burger
           </li>
           <li>
-            <img src="Assets/Iteration-2-aseets/icons/4.svg" />
+            <img src="assets/iteration-2-aseets/icons/4.svg" />
             Kızartmalar
           </li>
           <li>
-            <img src="Assets/Iteration-2-aseets/icons/5.svg" />
+            <img src="assets/iteration-2-aseets/icons/5.svg" />
             Fast food
           </li>
           <li>
-            <img src="Assets/Iteration-2-aseets/icons/6.svg" />
+            <img src="assets/iteration-2-aseets/icons/6.svg" />
             Gazlı İçecek
           </li>
         </ul>
@@ -91,33 +91,33 @@ export default function MainContent() {
         </div>
         <ul className="ul_iki">
           <li>
-            <img src="Assets/Iteration-2-aseets/icons/1.svg" />
+            <img src="assets/iteration-2-aseets/icons/1.svg" />
             YENİ! Kore
           </li>
           <li>
-            <img src="Assets/Iteration-2-aseets/icons/2.svg" />
+            <img src="assets/iteration-2-aseets/icons/2.svg" />
             Pizza
           </li>
           <li>
-            <img src="Assets/Iteration-2-aseets/icons/3.svg" />
+            <img src="assets/iteration-2-aseets/icons/3.svg" />
             Burger
           </li>
           <li>
-            <img src="Assets/Iteration-2-aseets/icons/4.svg" />
+            <img src="assets/iteration-2-aseets/icons/4.svg" />
             Kızartmalar
           </li>
           <li>
-            <img src="Assets/Iteration-2-aseets/icons/5.svg" />
+            <img src="assets/iteration-2-aseets/icons/5.svg" />
             Fast food
           </li>
           <li>
-            <img src="Assets/Iteration-2-aseets/icons/6.svg" />
+            <img src="assets/iteration-2-aseets/icons/6.svg" />
             Gazlı İçecek
           </li>
         </ul>
         <div className="menu-cards">
           <div className="card">
-            <img src="Assets/Iteration-2-aseets/pictures/food-1.png" />
+            <img src="assets/iteration-2-aseets/pictures/food-1.png" />
             <div>
               <h4>Terminal Pizza</h4>
               <div className="puantor">
@@ -132,7 +132,7 @@ export default function MainContent() {
             </div>
           </div>
           <div className="card">
-            <img src="Assets/Iteration-2-aseets/pictures/food-2.png" />
+            <img src="assets/iteration-2-aseets/pictures/food-2.png" />
             <div>
               <h4>Acı yok raki burger</h4>
               <div className="puantor">
@@ -147,7 +147,7 @@ export default function MainContent() {
             </div>
           </div>
           <div className="card">
-            <img src="Assets/Iteration-2-aseets/pictures/food-3.png" />
+            <img src="assets/iteration-2-aseets/pictures/food-3.png" />
             <div>
               <h4>useEffect Tavuklu Burger</h4>
               <div className="puantor">

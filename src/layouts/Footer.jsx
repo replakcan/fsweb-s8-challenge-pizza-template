@@ -3,25 +3,25 @@ export default function Footer() {
     <>
       <section className="footer-section">
         <div>
-          <img src="Assets/Iteration-2-aseets/footer/logo-footer.svg" />
+          <img src="assets/iteration-2-aseets/footer/logo-footer.svg" />
           <div className="iconlu-bolum">
             <div className="iconke">
               <img
-                src="Assets/Iteration-2-aseets/footer/icons/icon-1.png"
+                src="assets/iteration-2-aseets/footer/icons/icon-1.png"
                 alt=""
               />
               <p>341 Londonderry Road, Istanbul Türkiye</p>
             </div>
             <div className="iconke">
               <img
-                src="Assets/Iteration-2-aseets/footer/icons/icon-2.png"
+                src="assets/iteration-2-aseets/footer/icons/icon-2.png"
                 alt=""
               />
               <p>aciktim@teknolojikyemekler.com</p>
             </div>
             <div className="iconke">
               <img
-                src="Assets/Iteration-2-aseets/footer/icons/icon-3.png"
+                src="assets/iteration-2-aseets/footer/icons/icon-3.png"
                 alt=""
               />
               <p>+90 216 123 45 67</p>
@@ -40,18 +40,18 @@ export default function Footer() {
         <div className="insta">
           <h4>Instagram</h4>
           <div className="insta-photos">
-            <img src="Assets/Iteration-2-aseets/footer/insta/li-0.png" alt="" />
-            <img src="Assets/Iteration-2-aseets/footer/insta/li-1.png" alt="" />
-            <img src="Assets/Iteration-2-aseets/footer/insta/li-2.png" alt="" />
-            <img src="Assets/Iteration-2-aseets/footer/insta/li-3.png" alt="" />
-            <img src="Assets/Iteration-2-aseets/footer/insta/li-4.png" alt="" />
-            <img src="Assets/Iteration-2-aseets/footer/insta/li-5.png" alt="" />
+            <img src="assets/iteration-2-aseets/footer/insta/li-0.png" alt="" />
+            <img src="assets/iteration-2-aseets/footer/insta/li-1.png" alt="" />
+            <img src="assets/iteration-2-aseets/footer/insta/li-2.png" alt="" />
+            <img src="assets/iteration-2-aseets/footer/insta/li-3.png" alt="" />
+            <img src="assets/iteration-2-aseets/footer/insta/li-4.png" alt="" />
+            <img src="assets/iteration-2-aseets/footer/insta/li-5.png" alt="" />
           </div>
         </div>
       </section>
       <div className="copyright">
         <p>© 2024 Teknolojik Yemekler.</p>
-        <img src="Assets/Iteration-2-aseets/footer/icons8-twitter.svg" alt="" />
+        <img src="assets/iteration-2-aseets/footer/icons8-twitter.svg" alt="" />
       </div>
     </>
   );
