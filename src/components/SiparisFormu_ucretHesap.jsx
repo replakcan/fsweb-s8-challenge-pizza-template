@@ -30,7 +30,7 @@ export default function UcretHesap({
         </div>
         <div className="submit-btn">
             <button onClick={onClick} disabled={disabled} type="submit">
-              SİPARİŞ VER
+              ORDER NOW
             </button>
           
         </div>

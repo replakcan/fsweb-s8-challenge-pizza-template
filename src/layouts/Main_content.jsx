@@ -13,14 +13,14 @@ export default function MainContent() {
         <div className="giris-content">
           <img src="./images/iteration-1-assets/logo.svg" />
           <div>
-            <p id="firsat">fırsatı kaçırma</p>
+            <p id="firsat">a wise man once said:</p>
             <p id="slogan">
-              KOD ACIKTIRIR <br /> PİZZA DOYURUR
+              You Can Always Look Thicker <br /> Looks Better!
             </p>
           </div>
 
           <NavLink to="/siparis-formu">
-            <button className="giris-btn">ACIKTIM</button>
+            <button className="giris-btn">ARE YOU HUNGRY?</button>
           </NavLink>
         </div>
       </div>
@@ -55,11 +55,11 @@ export default function MainContent() {
           <div className="tri-left">
             <div className="left-card">
               <h2>
-                Özel <br />
-                Lezzetus
+                Chef's <br />
+                Special
               </h2>
-              <p>Posisyone ebsoluşın acı yok burger</p>
-              <button onClick={handleClick} className="btnburak">
+              <p>No pain no gain pizza</p>
+              <MakeOrderButton onClick={handleClick} />
                 SİPARİŞ VER
               </button>
             </div>
@@ -67,8 +67,8 @@ export default function MainContent() {
           <div className="tri-right">
             <div className="right-card-one">
               <h4>
-                Dechatlon <br />
-                Burger Menü
+                BoxInABox <br />
+                Burger Menu
               </h4>
               <button onClick={handleClick} className="btnburak">
                 SİPARİŞ VER
@@ -76,8 +76,8 @@ export default function MainContent() {
             </div>
             <div className="right-card-two">
               <h4>
-                <span>Çoooook hızlı</span> <br />
-                npm gibi kurye
+                <span>Waay faster courier</span> <br />
+                just like Schumacher!
               </h4>
               <button onClick={handleClick} className="btnburak">
                 SİPARİŞ VER
@@ -86,8 +86,8 @@ export default function MainContent() {
           </div>
         </div>
         <div className="text-container">
-          <p id="satisfy">en çok paketlenen menüler</p>
-          <p className="xlarge-yazi">Acıktıran Kodlara Doyuran Lezzetler</p>
+          <p id="satisfy">stop acting rough on yourself</p>
+          <p className="xlarge-yazi">We Already Know You Want Them All!</p>
         </div>
         <ul className="ul_iki">
           <li>
