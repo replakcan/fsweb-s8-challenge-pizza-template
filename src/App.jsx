@@ -1,4 +1,3 @@
-import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import SiparisFormu from "./pages/SiparisFormu";
 import Giris from "./pages/Giris";
