@@ -137,7 +137,7 @@ function SiparisFormu({ setUserChoices }) {
     event.preventDefault();
 
     if (!isValid) {
-      console.log("h4t4");
+      console.error("an error occured");
       return;
     } else {
       history.push("/siparis-ozeti");
@@ -146,11 +146,10 @@ function SiparisFormu({ setUserChoices }) {
     axios
       .post("https://reqres.in/api/pizza", siparis)
       .then((response) => {
-        console.log("RESPONSE", response.data);
         setUserChoices(response.data);
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error);
       });
   };
 

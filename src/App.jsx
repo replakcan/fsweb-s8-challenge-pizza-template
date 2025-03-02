@@ -8,7 +8,6 @@ import { useState } from "react";
 function App() {
   const [userChoices, setUserChoices] = useState({});
 
-  console.log(userChoices);
   return (
     <>
       <Switch>
