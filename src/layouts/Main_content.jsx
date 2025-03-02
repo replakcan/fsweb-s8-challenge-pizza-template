@@ -1,11 +1,16 @@
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink, useHistory } from 'react-router-dom'
+import { restaurantMenu } from '../../db/restaurant-menu'
+import MenuItem from '../components/MenuItem'
+import { mealItems } from '../../db/meal-item'
+import MealItem from '../components/MealItem'
+import MakeOrderButton from '../components/MakeOrderButton'
 
 export default function MainContent() {
-  let history = useHistory();
+  let history = useHistory()
 
   const handleClick = () => {
-    history.push("/siparis-formu");
-  };
+    history.push('/siparis-formu')
+  }
 
   return (
     <>
@@ -26,30 +31,9 @@ export default function MainContent() {
       </div>
       <section className="main-container">
         <ul className="ul_bir">
-          <li>
-            <img src="./images/iteration-2-aseets/icons/1.svg" />
-            YENİ! Kore
-          </li>
-          <li>
-            <img src="./images/iteration-2-aseets/icons/2.svg" />
-            Pizza
-          </li>
-          <li>
-            <img src="./images/iteration-2-aseets/icons/3.svg" />
-            Burger
-          </li>
-          <li>
-            <img src="./images/iteration-2-aseets/icons/4.svg" />
-            Kızartmalar
-          </li>
-          <li>
-            <img src="./images/iteration-2-aseets/icons/5.svg" />
-            Fast food
-          </li>
-          <li>
-            <img src="./images/iteration-2-aseets/icons/6.svg" />
-            Gazlı İçecek
-          </li>
+          {mealItems.map((meal) => {
+            return <MealItem key={meal.id} img={meal.img} name={meal.name} />
+          })}
         </ul>
         <div className="trinity">
           <div className="tri-left">
@@ -60,8 +44,6 @@ export default function MainContent() {
               </h2>
               <p>No pain no gain pizza</p>
               <MakeOrderButton onClick={handleClick} />
-                SİPARİŞ VER
-              </button>
             </div>
           </div>
           <div className="tri-right">
@@ -70,18 +52,14 @@ export default function MainContent() {
                 BoxInABox <br />
                 Burger Menu
               </h4>
-              <button onClick={handleClick} className="btnburak">
-                SİPARİŞ VER
-              </button>
+              <MakeOrderButton onClick={handleClick} />
             </div>
             <div className="right-card-two">
               <h4>
                 <span>Waay faster courier</span> <br />
                 just like Schumacher!
               </h4>
-              <button onClick={handleClick} className="btnburak">
-                SİPARİŞ VER
-              </button>
+              <MakeOrderButton onClick={handleClick} />
             </div>
           </div>
         </div>
@@ -90,79 +68,25 @@ export default function MainContent() {
           <p className="xlarge-yazi">We Already Know You Want Them All!</p>
         </div>
         <ul className="ul_iki">
-          <li>
-            <img src="./images/iteration-2-aseets/icons/1.svg" />
-            YENİ! Kore
-          </li>
-          <li>
-            <img src="./images/iteration-2-aseets/icons/2.svg" />
-            Pizza
-          </li>
-          <li>
-            <img src="./images/iteration-2-aseets/icons/3.svg" />
-            Burger
-          </li>
-          <li>
-            <img src="./images/iteration-2-aseets/icons/4.svg" />
-            Kızartmalar
-          </li>
-          <li>
-            <img src="./images/iteration-2-aseets/icons/5.svg" />
-            Fast food
-          </li>
-          <li>
-            <img src="./images/iteration-2-aseets/icons/6.svg" />
-            Gazlı İçecek
-          </li>
+          {mealItems.map((meal) => {
+            return <MealItem key={meal.id} img={meal.img} name={meal.name} />
+          })}
         </ul>
         <div className="menu-cards">
-          <div className="card">
-            <img src="./images/iteration-2-aseets/pictures/food-1.png" />
-            <div>
-              <h4>Terminal Pizza</h4>
-              <div className="puantor">
-                4.9
-                <div className="card-item-points">
-                  <p>(200)</p>
-                  <p>
-                    <strong>60₺</strong>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <img src="./images/iteration-2-aseets/pictures/food-2.png" />
-            <div>
-              <h4>Acı yok raki burger</h4>
-              <div className="puantor">
-                4.9
-                <div className="card-item-points">
-                  <p>(200)</p>
-                  <p>
-                    <strong>60₺</strong>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <img src="./images/iteration-2-aseets/pictures/food-3.png" />
-            <div>
-              <h4>useEffect Tavuklu Burger</h4>
-              <div className="puantor">
-                4.9
-                <div className="card-item-points">
-                  <p>(200)</p>
-                  <p>
-                    <strong>60₺</strong>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          {restaurantMenu.map((el) => {
+            return (
+              <MenuItem
+                key={el.id}
+                img={el.img}
+                name={el.name}
+                rating={el.rating}
+                soldCount={el.soldCount}
+                price={el.price}
+              />
+            )
+          })}
         </div>
       </section>
     </>
-  );
+  )
 }
