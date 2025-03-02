@@ -539,6 +539,10 @@ h4 span {
   gap: 0;
 }
 
+.menu-item-header {
+  text-align: center;
+}
+
 .menuler h4 {
   margin-bottom: 2rem;
 }
