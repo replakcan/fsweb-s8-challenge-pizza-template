@@ -6,33 +6,33 @@ function Sonuc({ userChoices }) {
       <section className="siparis-ozet-sayfasi">
         <img src="./images/iteration-1-assets/logo.svg" />
         <div className="sonuc-text">
-          <p className="lezzet">lezzetin yolda</p>
-          <p id="siparis-alindi"> SİPARİŞ ALINDI!</p>
+          <p className="lezzet">rest is up to us</p>
+          <p id="siparis-alindi"> WE RECIEVED YOUR ORDER!</p>
         </div>
         <div>
-          <h3>Poisition Absolute Acı Pizza</h3>
+          <h3>No Pain No Gain Pizza</h3>
           <div>
             <p>
-              Boyut: <strong>{userChoices.boyut}</strong>
+              Size: <strong>{userChoices.boyut}</strong>
             </p>
             <p>
-              Hamur: <strong>{userChoices.hamur}</strong>
+              Dough: <strong>{userChoices.hamur}</strong>
             </p>
             <p>
-              Ek Malzemeler: <strong>{userChoices["ek-malzeme"]}</strong>
+              Extra Ingredients: <strong>{userChoices["ek-malzeme"]}</strong>
             </p>
           </div>
         </div>
         <div className="price-container">
-          <h3>Sipariş Toplamı </h3>
+          <h3>Order Total </h3>
           <div className="secim-harci">
-            <p>Seçimler</p>
+            <p>Extra</p>
             <p>
               <strong>{userChoices.secimler}.00₺</strong>
             </p>
           </div>
           <div className="secim-harci">
-            <p>Toplam</p>
+            <p>Total</p>
             <p>
               <strong>{userChoices.toplam_ucret}.00₺</strong>
             </p>

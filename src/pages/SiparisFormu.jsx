@@ -25,14 +25,14 @@ const initialSiparis = {
 
 const initialErrors = {
   isim: "",
-  boyut: "zorunlu alan*",
-  hamur: "zorunlu alan*",
+  boyut: 'required*',
+  hamur: 'required*',
   "ek-malzeme": "",
 };
 
 const errorMessages = {
-  isim: "İsim en az 3 karakter içermelidir.",
-  "ek-malzeme": "En az 4 seçim yapmalısınız.",
+  isim: 'Name needs to be minimum of 3 characters',
+  'ek-malzeme': 'Minimum of 4 ingredients required*',
 };
 
 const pizza_ucreti = 85.5;
@@ -161,7 +161,7 @@ function SiparisFormu({ setUserChoices }) {
           <SiparisFormuInfo />
           <div className="pizza-boyutlari">
             <div className="boyut-sec">
-              <h3>Boyut Seç </h3>
+              <h3>Size</h3>
               {errors.boyut && <p className="error-message">{errors.boyut}</p>}
               {boyutlar.map((boyut, index) => {
                 return (
@@ -176,7 +176,7 @@ function SiparisFormu({ setUserChoices }) {
               })}
             </div>
             <div className="hamur-sec">
-              <h3>Hamur Seç</h3>
+              <h3>Dough Type</h3>
               {errors.hamur && <p className="error-message">{errors.hamur}</p>}
               <PizzaHamur
                 handleInputChange={handleInputChange}
@@ -185,8 +185,8 @@ function SiparisFormu({ setUserChoices }) {
             </div>
           </div>
           <div className="ek-malzemeler">
-            <h3>Ek Malzemeler</h3>
-            <p>En az 4 adet ve en fazla 10 adet seçim yapabilirsiniz. 5₺</p>
+            <h3>Extra Ingredients</h3>
+            <p>Min 4, max 10 ingredients can be added. (5₺ per ingredient)</p>
             <div className="malzemos">
               {ekMalzemeler.map((malzeme, index) => {
                 return (

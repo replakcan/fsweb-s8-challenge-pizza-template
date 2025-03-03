@@ -21,20 +21,19 @@ export default function UcretHesap({
       </div>
       <div className="siparis-toplami">
         <div className="siparis-toplami-info">
-          <h3>Sipariş Toplamı</h3>
-          <p>Seçimler____________________{ekMalzemeHesabi}₺</p>
+          <h3>Order Total</h3>
+          <p>Ingredients____________________{ekMalzemeHesabi}₺</p>
           <p id="kirmizi">
-            Toplam____________________
+            Total____________________
             {toplamHesap}₺
           </p>
         </div>
         <div className="submit-btn">
-            <button onClick={onClick} disabled={disabled} type="submit">
-              ORDER NOW
-            </button>
-          
+          <button onClick={onClick} disabled={disabled} type="submit">
+            CONFIRM ORDER
+          </button>
         </div>
       </div>
     </div>
-  );
+  )
 }
