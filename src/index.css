@@ -411,6 +411,30 @@ ul {
   background-color: #fdc913;
   color: #ce2829;
   transition: 0.5s;
+  cursor: pointer;
+}
+
+.ul_bir li:hover {
+  background-color: #fdc913;
+  color: #ce2829;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
+.menu-cards .card:hover {
+  background-color: #ce2829;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 2rem;
+  transform: scale(1.02);
+}
+
+.insta-photos img:hover {
+  background-color: #ce2829;
+  transition: 0.5s;
+  cursor: pointer;
+  transform: scale(1.2);
 }
 
 li {
@@ -603,6 +627,24 @@ h4 span {
 
 .ul_bir li {
   padding: 1rem;
+}
+
+.make-order-btn:hover {
+  background-color: #ce2829;
+  color: white;
+  transition: 0.5s;
+}
+
+.left-card .make-order-btn:hover {
+  background-color: #fdc913;
+  color: black;
+}
+
+.giris-btn:hover {
+  color: #fdc913;
+  background-color: black;
+  border: black;
+  transition: 0.5s;
 }
 
 @media (min-width: 1100px) {
