@@ -35,26 +35,6 @@ const errorMessages = {
   'ek-malzeme': 'Minimum of 4 ingredients required*',
 };
 
-const pizza_ucreti = 85.5;
-
-const boyutlar = ["Küçük", "Orta", "Büyük"];
-
-const ekMalzemeler = [
-  "Pepperoni",
-  "Sosis",
-  "Kanada Jambonu",
-  "Tavuk Izgara",
-  "Soğan",
-  "Domates",
-  "Mısır",
-  "Sucuk",
-  "Jalepeno",
-  "Sarımsak",
-  "Biber",
-  "Ananas",
-  "Kabak",
-];
-
 function SiparisFormu({ setUserChoices }) {
   const [siparis, setSiparis] = useState(initialSiparis);
   const [errors, setErrors] = useState(initialErrors);
