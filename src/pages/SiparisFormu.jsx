@@ -1,137 +1,133 @@
-import { useEffect, useState } from "react";
-import SiparisFormuHeader from "../components/SiparisFormu_header";
-import SiparisFormuInfo from "../components/SiparisFormu_info";
-import PizzaBoyut from "../components/SiparisFormu_pizzaBoyut";
-import PizzaHamur from "../components/SiparisFormu_pizzaHamur";
-import EkMalzemeler from "../components/SiparisFormu_ekMalzemeler";
-import SiparisNotu from "../components/SiparisFormu_siparisNotu";
-import UcretHesap from "../components/SiparisFormu_ucretHesap";
-import IsimAlani from "../components/SiparisFormu_isimAlani";
-import "bootstrap/dist/css/bootstrap.min.css";
-import axios from "axios";
-import { useHistory } from "react-router-dom";
-import { Form } from "reactstrap";
-import Footer from "../layouts/Footer";
+import { useEffect, useState } from 'react'
+import SiparisFormuHeader from '../components/SiparisFormu_header'
+import SiparisFormuInfo from '../components/SiparisFormu_info'
+import PizzaBoyut from '../components/SiparisFormu_pizzaBoyut'
+import PizzaHamur from '../components/SiparisFormu_pizzaHamur'
+import EkMalzemeler from '../components/SiparisFormu_ekMalzemeler'
+import SiparisNotu from '../components/SiparisFormu_siparisNotu'
+import UcretHesap from '../components/SiparisFormu_ucretHesap'
+import IsimAlani from '../components/SiparisFormu_isimAlani'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import axios from 'axios'
+import { useHistory } from 'react-router-dom'
+import { Form } from 'reactstrap'
+import Footer from '../layouts/Footer'
+import { boyutlar, pizza_ucreti, ekMalzemeler } from '../../db/order-page'
 
 const initialSiparis = {
-  isim: "",
-  boyut: "",
-  hamur: "",
-  "ek-malzeme": "",
-  "siparis-notu": "",
+  isim: '',
+  boyut: '',
+  hamur: '',
+  'ek-malzeme': '',
+  'siparis-notu': '',
   secimler: 0,
   toplam_ucret: 0,
-};
+}
 
 const initialErrors = {
-  isim: "",
+  isim: '',
   boyut: 'required*',
   hamur: 'required*',
-  "ek-malzeme": "",
-};
+  'ek-malzeme': '',
+}
 
 const errorMessages = {
   isim: 'Name needs to be minimum of 3 characters',
   'ek-malzeme': 'Minimum of 4 ingredients required*',
-};
+}
 
 function SiparisFormu({ setUserChoices }) {
-  const [siparis, setSiparis] = useState(initialSiparis);
-  const [errors, setErrors] = useState(initialErrors);
-  const [isValid, setIsValid] = useState(false);
-  const [adet, setAdet] = useState(1);
+  const [siparis, setSiparis] = useState(initialSiparis)
+  const [errors, setErrors] = useState(initialErrors)
+  const [isValid, setIsValid] = useState(false)
+  const [adet, setAdet] = useState(1)
 
   useEffect(() => {
-    if (
-      siparis.boyut !== "" &&
-      siparis.hamur !== "" &&
-      siparis.isim.length >= 3 &&
-      siparis["ek-malzeme"].length >= 4
-    ) {
-      setIsValid(true);
+    if (siparis.boyut !== '' && siparis.hamur !== '' && siparis.isim.length >= 3 && siparis['ek-malzeme'].length >= 4) {
+      setIsValid(true)
     } else {
-      setIsValid(false);
+      setIsValid(false)
     }
 
-    if (siparis["ek-malzeme"].length >= 4) {
-      setErrors({ ...errors, ["ek-malzeme"]: "" });
+    if (siparis['ek-malzeme'].length >= 4) {
+      setErrors({ ...errors, ['ek-malzeme']: '' })
     } else {
-      setErrors({ ...errors, ["ek-malzeme"]: errorMessages["ek-malzeme"] });
+      setErrors({ ...errors, ['ek-malzeme']: errorMessages['ek-malzeme'] })
     }
-  }, [siparis]);
+  }, [siparis])
 
   const countHandler = (event) => {
-    const { id } = event.target;
-    if (id === "cikar") {
+    const { id } = event.target
+    if (id === 'cikar') {
       if (adet == 1) {
-        setAdet(1);
+        setAdet(1)
       } else {
-        setAdet((adet) => adet - 1);
+        setAdet((adet) => adet - 1)
       }
-    } else if (id === "ekle") {
-      setAdet((adet) => adet + 1);
+    } else if (id === 'ekle') {
+      setAdet((adet) => adet + 1)
     }
-  };
+  }
 
   function handleInputChange(event) {
-    let { name, value } = event.target;
+    let { name, value } = event.target
 
-    if (name === "ek-malzeme") {
-      if (siparis["ek-malzeme"].includes(value)) {
+    if (name === 'ek-malzeme') {
+      if (siparis['ek-malzeme'].includes(value)) {
         setSiparis({
           ...siparis,
-          [name]: siparis["ek-malzeme"].filter((malzeme) => malzeme !== value),
-        });
+          [name]: siparis['ek-malzeme'].filter((malzeme) => malzeme !== value),
+        })
       } else {
         setSiparis({
           ...siparis,
-          [name]: [...siparis["ek-malzeme"], value],
-        });
+          [name]: [...siparis['ek-malzeme'], value],
+        })
       }
     } else {
-      setSiparis({ ...siparis, [name]: value });
+      setSiparis({ ...siparis, [name]: value })
     }
 
-    if (name === "isim") {
+    if (name === 'isim') {
       if (value.length >= 3) {
-        setErrors({ ...errors, [name]: "" });
+        setErrors({ ...errors, [name]: '' })
       } else {
-        setErrors({ ...errors, [name]: errorMessages.isim });
+        setErrors({ ...errors, [name]: errorMessages.isim })
       }
     }
 
-    if (name === "boyut" || name === "hamur") {
-      if (siparis.boyut !== "") {
-        setErrors({ ...errors, [name]: "" });
+    if (name === 'boyut' || name === 'hamur') {
+      if (siparis.boyut !== '') {
+        setErrors({ ...errors, [name]: '' })
       } else {
-        setErrors({ ...errors, [name]: errorMessages.boyut });
+        setErrors({ ...errors, [name]: errorMessages.boyut })
       }
     }
   }
 
-  siparis.secimler = siparis["ek-malzeme"].length * 5;
-  siparis.toplam_ucret = adet * (siparis.secimler + pizza_ucreti);
-  let history = useHistory();
+  siparis.secimler = siparis['ek-malzeme'].length * 5
+  siparis.toplam_ucret = adet * (siparis.secimler + pizza_ucreti)
+  let history = useHistory()
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
     if (!isValid) {
-      console.error("an error occured");
-      return;
+      console.error('an error occured')
+      return
     } else {
-      history.push("/siparis-ozeti");
+      history.push('/siparis-ozeti')
     }
 
     axios
-      .post("https://reqres.in/api/pizza", siparis)
+      .post('https://reqres.in/api/pizza', siparis)
       .then((response) => {
-        setUserChoices(response.data);
+        setUserChoices(response.data)
       })
       .catch((error) => {
-        console.error(error);
-      });
-  };
+        console.error(error)
+      })
+  }
 
   return (
     <>
@@ -146,22 +142,19 @@ function SiparisFormu({ setUserChoices }) {
               {boyutlar.map((boyut, index) => {
                 return (
                   <PizzaBoyut
-                    className={index == 1 ? "data-cy-boyut" : ""}
+                    className={index == 1 ? 'data-cy-boyut' : ''}
                     key={index}
                     boyut={boyut}
                     checked={siparis.boyut === boyut}
                     onChange={handleInputChange}
                   />
-                );
+                )
               })}
             </div>
             <div className="hamur-sec">
               <h3>Dough Type</h3>
               {errors.hamur && <p className="error-message">{errors.hamur}</p>}
-              <PizzaHamur
-                handleInputChange={handleInputChange}
-                hamur={siparis.hamur}
-              />
+              <PizzaHamur handleInputChange={handleInputChange} hamur={siparis.hamur} />
             </div>
           </div>
           <div className="ek-malzemeler">
@@ -171,42 +164,30 @@ function SiparisFormu({ setUserChoices }) {
               {ekMalzemeler.map((malzeme, index) => {
                 return (
                   <EkMalzemeler
-                    className={
-                      index >= 10 ? "data-cy-disabled" : "data-cy-not-disabled"
-                    }
+                    className={index >= 10 ? 'data-cy-disabled' : 'data-cy-not-disabled'}
                     key={index}
-                    disabled={
-                      siparis["ek-malzeme"].length >= 10 &&
-                      !siparis["ek-malzeme"].includes(malzeme)
-                    }
+                    disabled={siparis['ek-malzeme'].length >= 10 && !siparis['ek-malzeme'].includes(malzeme)}
                     onChange={handleInputChange}
                     value={malzeme}
-                    checked={siparis["ek-malzeme"].includes(malzeme)}
+                    checked={siparis['ek-malzeme'].includes(malzeme)}
                   />
-                );
+                )
               })}
             </div>
-            {errors["ek-malzeme"] && (
-              <p className="error-message">{errors["ek-malzeme"]}</p>
-            )}
+            {errors['ek-malzeme'] && <p className="error-message">{errors['ek-malzeme']}</p>}
           </div>
           <div className="isim-alani">
             <IsimAlani isim={siparis.isim} onChange={handleInputChange} />
             {errors.isim && <p className="error-message">{errors.isim}</p>}
           </div>
           <div className="siparis-notu">
-            <SiparisNotu
-              handleInputChange={handleInputChange}
-              siparisnotu={siparis["siparis-notu"]}
-            />
+            <SiparisNotu handleInputChange={handleInputChange} siparisnotu={siparis['siparis-notu']} />
           </div>
           <UcretHesap
             handleInputChange={countHandler}
             adet={adet}
-            ekMalzemeHesabi={siparis["ek-malzeme"].length * 5}
-            toplamHesap={
-              (pizza_ucreti + siparis["ek-malzeme"].length * 5) * adet
-            }
+            ekMalzemeHesabi={siparis['ek-malzeme'].length * 5}
+            toplamHesap={(pizza_ucreti + siparis['ek-malzeme'].length * 5) * adet}
             disabled={!isValid}
             onClick={handleSubmit}
           />
@@ -214,7 +195,7 @@ function SiparisFormu({ setUserChoices }) {
       </Form>
       <Footer />
     </>
-  );
+  )
 }
 
-export default SiparisFormu;
+export default SiparisFormu

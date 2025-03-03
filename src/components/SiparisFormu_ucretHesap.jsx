@@ -1,13 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom'
 
-export default function UcretHesap({
-  handleInputChange,
-  adet,
-  ekMalzemeHesabi,
-  toplamHesap,
-  disabled,
-  onClick,
-}) {
+export default function UcretHesap({ handleInputChange, adet, ekMalzemeHesabi, toplamHesap, disabled, onClick }) {
   return (
     <div className="hesap-butonlari">
       <div className="adet-butonlari">
