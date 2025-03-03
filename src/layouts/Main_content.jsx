@@ -25,7 +25,7 @@ export default function MainContent() {
           </div>
 
           <NavLink to="/siparis-formu">
-            <button className="giris-btn">OFC YOU ARE HUNGRY</button>
+            <button className="giris-btn">{"Click to satisfy your hunger".toUpperCase()}</button>
           </NavLink>
         </div>
       </div>
