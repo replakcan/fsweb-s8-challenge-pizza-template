@@ -1,3 +1,8 @@
+import { communicationInfos } from '../../db/footer-communication-infos'
+import { hotMenu } from '../../db/footer-hot-menu-items'
+import { instagramPhotos } from '../../db/footer-instagram-photos'
+import CommunicationInfo from '../components/CommunicationInfo'
+
 export default function Footer() {
   return (
     <>
@@ -5,47 +10,23 @@ export default function Footer() {
         <div>
           <img src="./images/iteration-2-aseets/footer/logo-footer.svg" />
           <div className="iconlu-bolum">
-            <div className="iconke">
-              <img
-                src="./images/iteration-2-aseets/footer/icons/icon-1.png"
-                alt=""
-              />
-              <p>341 Londonderry Road, Istanbul Türkiye</p>
-            </div>
-            <div className="iconke">
-              <img
-                src="./images/iteration-2-aseets/footer/icons/icon-2.png"
-                alt=""
-              />
-              <p>aciktim@teknolojikyemekler.com</p>
-            </div>
-            <div className="iconke">
-              <img
-                src="./images/iteration-2-aseets/footer/icons/icon-3.png"
-                alt=""
-              />
-              <p>+90 216 123 45 67</p>
-            </div>
+            {communicationInfos.map((info) => (
+              <CommunicationInfo key={info._id} img={info.img} text={info.text} />
+            ))}
           </div>
         </div>
         <div className="menuler">
           <h4>Hot Menu</h4>
-          <p>Terminal Pizza</p>
-          <p>5 Kişilik Hacıbekir Pizza</p>
-          <p>useEffect Tavuklu Pizza</p>
-          <p>Beyaz Console Frosty</p>
-          <p>Testler Geçti Mutlu Burger</p>
-          <p>Position Absolute Acı Burger</p>
+          {hotMenu.map((el) => (
+            <p key={el._id}>{el.item}</p>
+          ))}
         </div>
         <div className="insta">
           <h4>Instagram</h4>
           <div className="insta-photos">
-            <img src="./images/iteration-2-aseets/footer/insta/li-0.png" alt="" />
-            <img src="./images/iteration-2-aseets/footer/insta/li-1.png" alt="" />
-            <img src="./images/iteration-2-aseets/footer/insta/li-2.png" alt="" />
-            <img src="./images/iteration-2-aseets/footer/insta/li-3.png" alt="" />
-            <img src="./images/iteration-2-aseets/footer/insta/li-4.png" alt="" />
-            <img src="./images/iteration-2-aseets/footer/insta/li-5.png" alt="" />
+            {instagramPhotos.map((photo) => {
+              return <img key={photo._id} src={`./images/iteration-2-aseets/footer/insta/li-${photo.img}.png`} />
+            })}
           </div>
         </div>
       </section>
@@ -54,5 +35,5 @@ export default function Footer() {
         <img src="./images/iteration-2-aseets/footer/icons8-twitter.svg" alt="twitter icon" />
       </div>
     </>
-  );
+  )
 }
