@@ -25,7 +25,7 @@ export default function MainContent() {
           </div>
 
           <NavLink to="/siparis-formu">
-            <button className="giris-btn">ARE YOU HUNGRY?</button>
+            <button className="giris-btn">OFC YOU ARE HUNGRY</button>
           </NavLink>
         </div>
       </div>
