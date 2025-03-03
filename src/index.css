@@ -407,10 +407,10 @@ ul {
   justify-content: center;
 }
 
-.ul_iki li:nth-child(2) {
-  background: #292929;
-  color: white;
-  border-color: #292929;
+.ul_iki li:hover {
+  background-color: #fdc913;
+  color: #ce2829;
+  transition: 0.5s;
 }
 
 li {
