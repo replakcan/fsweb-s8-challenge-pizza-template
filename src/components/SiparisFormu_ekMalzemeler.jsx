@@ -1,10 +1,4 @@
-export default function EkMalzemeler({
-  disabled,
-  onChange,
-  value,
-  checked,
-  className,
-}) {
+export default function EkMalzemeler({ disabled, onChange, value, checked, className }) {
   return (
     <>
       <label className="malzeme">
@@ -20,5 +14,5 @@ export default function EkMalzemeler({
         {value}
       </label>
     </>
-  );
+  )
 }
